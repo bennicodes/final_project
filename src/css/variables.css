@@ -1,0 +1,23 @@
+:root {
+  /* COLOR ---------*/
+  --primary-color: ;
+  --secondary-color: ;
+  --text-color: ;
+
+  /* Navbar --------- */
+  --primary-navbar-color: #000;
+  --navbar-hover-color: #a3a3a3;
+  --navbar-text-color: #fff;
+
+  /* SPACING */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2;
+  --spacing-x-large: 4rem;
+
+  /* FONTS */
+  --font-size-base: 1rem;
+  --font-size-medium: 1.2rem;
+  --font-size-large: 1.5rem;
+  --font-size-x-large: 2rem;
+}

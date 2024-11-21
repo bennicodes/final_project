@@ -1,0 +1,130 @@
+@font-face {
+  font-family: Lato-Regular;
+  src: url(../assets/fonts/Lato-Regular.ttf);
+}
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--primary-navbar-color);
+  color: var(--navbar-text-color);
+  padding: var(--spacing-medium) var(--spacing-large);
+  display: flex;
+  align-items: center;
+  font-family: Lato-Regular, sans-serif;
+}
+
+/* LOGO STYLE --------------- */
+.navbar__logo-container {
+  width: 48px;
+  height: 48px;
+  padding: var(--spacing-medium) var(--font-size-x-large);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__logo {
+  width: 32px;
+  height: auto;
+}
+
+/* LINK STYLES ------------ */
+.navbar__link-container {
+  flex-grow: 1;
+}
+
+.navbar__links {
+  height: 100%;
+  display: flex;
+  gap: var(--spacing-x-large);
+  justify-content: center;
+}
+
+.navbar__links a {
+  color: inherit;
+  font-size: var(--font-size-base);
+}
+
+.navbar__links a:hover {
+  color: var(--hover-color);
+}
+
+.navbar__link--active {
+  border-bottom: 1px solid var(--navbar-text-color);
+}
+.navbar__link--active:hover {
+  border-bottom: 1px solid var(--navbar-hover-color);
+}
+
+/* STYLES FOR TOGGLE BUTTON ----------- */
+.navbar__toggle-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-medium);
+}
+
+.navbar__toggle-button {
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+}
+
+.navbar__toggle-button:hover {
+  color: var(--navbar-hover-color);
+}
+
+.navbar__toggle-logo {
+  display: block;
+  color: var(--navbar-text-color);
+  visibility: hidden;
+}
+
+.navbar__toggle-logo:hover {
+  color: var(--navbar-hover-color);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+  .navbar {
+  }
+  .navbar__toggle-logo {
+    visibility: visible;
+  }
+
+  .navbar__toggle-button:hover {
+    cursor: pointer;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: 0;
+    right: -1000px;
+    width: 50%;
+    flex-direction: column;
+    transition: 1s;
+    background-color: var(--primary-navbar-color);
+  }
+
+  .navbar__links li {
+    padding-left: var(--spacing-medium);
+  }
+
+  .navbar__links--active {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .navbar__links {
+    width: 100%;
+  }
+}
