@@ -15,7 +15,6 @@ header {
   width: 100%;
   background-color: var(--primary-navbar-color);
   color: var(--navbar-text-color);
-  /* padding: var(--spacing-large); */
   display: flex;
   align-items: center;
   font-family: Lato-Regular, sans-serif;
@@ -46,7 +45,6 @@ header {
   display: flex;
   gap: var(--spacing-x-large);
   justify-content: center;
-  padding: var(--spacing-medium);
 }
 
 .navbar__links a {
@@ -56,6 +54,7 @@ header {
 
 .navbar__links a:hover {
   color: var(--hover-color);
+  cursor: pointer;
 }
 
 .navbar__link--active {
@@ -113,8 +112,14 @@ header {
     background-color: var(--primary-navbar-color);
   }
 
-  .navbar__links li {
-    padding-left: var(--spacing-medium);
+  .navbar__link a {
+    display: block;
+    padding: var(--spacing-medium) 0 var(--spacing-small) var(--spacing-medium);
+  }
+
+  .navbar__link a:hover {
+    background-color: #d5d5d53d;
+    transition: all 0.2s ease;
   }
 
   .navbar__links--active {

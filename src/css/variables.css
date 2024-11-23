@@ -1,21 +1,25 @@
 :root {
-  /* COLOR ---------*/
+  /* Color ---------*/
   --text-color: #000;
   --background-color: #fff;
   --button-color: #2f8af1;
 
-  /* Navbar --------- */
+  /* Navbar Colors --------- */
   --primary-navbar-color: #000;
   --navbar-hover-color: #a3a3a3;
   --navbar-text-color: #fff;
 
-  /* SPACING */
+  /* Footer Colors --------- */
+  --footer-background: #000;
+  --footer-foreground: #fff;
+
+  /* Spacing */
   --spacing-small: 0.5rem;
   --spacing-medium: 1rem;
-  --spacing-large: 2;
+  --spacing-large: 2rem;
   --spacing-x-large: 4rem;
 
-  /* FONTS */
+  /* Fonts */
   --font-size-base: 1rem;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.5rem;

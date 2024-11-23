@@ -31,16 +31,23 @@
         <!-- NAVBAR LINKS ------------ -->
         <div class="navbar__link-container">
           <ul class="navbar__links">
-            <li class="navbar__link navbar__link--active">
+            <li class="navbar__link">
               <a href="../index.html">Home</a>
             </li>
-            <li class="navbar__link">
+            <li class="navbar__link navbar__link--active">
               <a href="../pages/products.html">Products</a>
             </li>
-            <li class="navbar__link"><a href="#">Admissions</a></li>
-            <li class="navbar__link"><a href="#">Contact</a></li>
+            <li class="navbar__link">
+              <a href="#" class="product__card-link">Admissions</a>
+            </li>
+            <li class="navbar__link">
+              <a href="#" class="product__card-link">Contact</a>
+            </li>
           </ul>
         </div>
+
+        <!-- TODO: Add shopping cart to navbar -->
+        <!-- SHOPPING CART ----------- -->
 
         <!-- TOGGLE BUTTON ----------- -->
         <div class="navbar__toggle-button-container">
@@ -51,368 +58,382 @@
       </nav>
 
       <!-- HEADER CONTENT ------------- -->
-      <div class="header__product-container">
-        <a
-          class="header__product-link"
-          href="/iphone-16-pro/"
-          target="_self"
-          tabindex="-1"
-          >&nbsp;</a
-        >
-      </div>
     </header>
     <main>
       <div class="heading-container">
         <h2 class="main-heading">Apple Products</h2>
       </div>
+
+      <!-- iPhone Section --------- -->
       <h3 class="section__heading">iPhone</h3>
       <section class="product__section">
-        <section class="product__section--container">
+        <section class="product__section-container">
           <div class="product__card">
-            <!-- <a href=""> -->
-            <h3 class="product__card--heading-iphone">iPhone 16 Pro &</h3>
-            <h3 class="product__card--heading-iphone-2">Pro Max</h3>
-            <div class="product__card-image-container">
-              <img
-                src="../assets/img/iphone_16_pro_max-removebg-preview.png"
-                alt="iphone 16 pro"
-                class="product__card--image"
-              />
-            </div>
-            <p class="card__paragraph">
-              From $999<a
-                href="./order.html"
-                target="_blank"
-                class="product__buy--link"
-                >Buy</a
-              >
-            </p>
+            <a href="#" class="product__card-link">
+              <h3 class="product__card-heading">iPhone 16 Pro &</h3>
+              <h3 class="product__card-heading">Pro Max</h3>
+              <div class="product__card-image-container">
+                <img
+                  src="../assets/img/iphone_16_pro_max-removebg-preview.png"
+                  alt="iphone 16 pro"
+                  class="product__card-image"
+                />
+              </div>
+              <p class="card__paragraph">
+                From $999<a
+                  href="./order.html"
+                  target="_blank"
+                  class="product__buy-link"
+                  >Buy</a
+                >
+              </p>
+            </a>
           </div>
           <ul class="product__list">
-            <h4 class="product__list--heading">iPhone 16 Pro</h4>
-            <li class="product__list--specs">
+            <h4 class="product__list-heading">iPhone 16 Pro</h4>
+            <li class="product__list-specs">
               The first iPhone designed for Apple Intelligence. Personal,
               private, powerful.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Camera Control gives you an easier way to quickly access camera
               tools
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               A18 Pro chip powers Apple Intelligence footnote 3 and AAA gaming —
               and helps deliver a huge leap in battery life
             </li>
-            <li class="product__list--specs last-spec">
+            <li class="product__list-specs last-spec">
               4K 120 fps Dolby Vision and 4 studio-quality mics. A Pro studio in
               your pocket.
             </li>
           </ul>
         </section>
-        <section class="product__section--container">
+
+        <section class="product__section-container">
           <div class="product__card">
-            <h3 class="product__card--heading-iphone">iPhone 16 &</h3>
-            <h3 class="product__card--heading-iphone-2">iPhone 16 Plus</h3>
-            <div class="product__card-image-container">
-              <img
-                src="../assets/img/iphone-16-reg-removebg-preview.png"
-                alt="iphone 16"
-                class="product__card--image"
-              />
-            </div>
-            <p class="card__paragraph">
-              From $799<a
-                href="./order.html"
-                target="_blank"
-                class="product__buy--link"
-                >Buy</a
-              >
-            </p>
+            <a href="#" class="product__card-link">
+              <h3 class="product__card-heading">iPhone 16 &</h3>
+              <h3 class="product__card-heading">iPhone 16 Plus</h3>
+              <div class="product__card-image-container">
+                <img
+                  src="../assets/img/iphone-16-reg-removebg-preview.png"
+                  alt="iphone 16"
+                  class="product__card-image"
+                />
+              </div>
+              <p class="card__paragraph">
+                From $799<a
+                  href="./order.html"
+                  target="_blank"
+                  class="product__buy-link"
+                  >Buy</a
+                >
+              </p>
+            </a>
           </div>
           <ul class="product__list">
-            <h4 class="product__list--heading">iPhone 16</h4>
-            <li class="product__list--specs">
+            <h4 class="product__list-heading">iPhone 16</h4>
+            <li class="product__list-specs">
               The first iPhone designed for Apple Intelligence. Personal,
               Private and Powerful. Personal, private, powerful.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Camera Control gives you an easier way to quickly access camera
               tools
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               A18 chip enables Apple Intelligence and console-level gaming with
               exceptional power efficiency
             </li>
-            <li class="product__list--specs last-spec">
+            <li class="product__list-specs last-spec">
               A big boost in battery life with up to 22 hours of video playback
               footnote
             </li>
           </ul>
         </section>
       </section>
+
+      <!-- Macbook Section --------- -->
       <h3 class="section__heading">Mac</h3>
       <section class="product__section">
-        <section class="product__section--container mac">
+        <section class="product__section-container mac">
           <div class="product__card">
-            <h3 class="product__card--heading">Macbook Pro</h3>
-            <div class="product__card-image-container">
-              <img
-                src="../assets/img/macbook-pro-removebg-preview.png"
-                alt="macbook pro"
-                class="product__card--image"
-              />
-            </div>
-            <p class="card__paragraph">
-              From $1599<a
-                href="./order.html"
-                target="_blank"
-                class="product__buy--link"
-                >Buy</a
-              >
-            </p>
+            <a href="#" class="product__card-link">
+              <h3 class="product__card-heading">Macbook Pro</h3>
+              <div class="product__card-image-container">
+                <img
+                  src="../assets/img/macbook-pro-removebg-preview.png"
+                  alt="macbook pro"
+                  class="product__card-image"
+                />
+              </div>
+              <p class="card__paragraph">
+                From $1599<a
+                  href="./order.html"
+                  target="_blank"
+                  class="product__buy-link"
+                  >Buy</a
+                >
+              </p>
+            </a>
           </div>
           <ul class="product__list mac-list">
-            <h4 class="product__list--heading">Macbook Pro</h4>
-            <li class="product__list--specs">
+            <h4 class="product__list-heading">Macbook Pro</h4>
+            <li class="product__list-specs">
               With M3, M3 Pro, or M3 Max, our most advanced chips for personal
               computers, MacBook Pro empowers you to take on the most demanding
               projects
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Go all day with up to 22 hours of battery life
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Liquid Retina XDR display is the best ever in a laptop, with
               Extreme Dynamic Range, incredible contrast, and true-to-life
               colors
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Look sharp and sound clear — anywhere — with the 1080p FaceTime HD
               camera, three studio-quality mics, and six speakers with Spatial
               Audio
             </li>
-            <li class="product__list--specs last-spec">
+            <li class="product__list-specs last-spec">
               Connect everything you need with up to three Thunderbolt 4 ports,
               an SDXC card slot, an HDMI port, a MagSafe 3 port, and a headphone
               jack
             </li>
           </ul>
         </section>
-        <section class="product__section--container mac">
+
+        <section class="product__section-container mac">
           <div class="product__card">
-            <h3 class="product__card--heading">Macbook Air</h3>
-            <div class="product__card-image-container">
-              <img
-                src="../assets/img/Macbook-removebg-preview.png"
-                alt="macbook air"
-                class="product__card--image"
-              />
-            </div>
-            <p class="card__paragraph">
-              From $1299<a
-                href="./order.html"
-                target="_blank"
-                class="product__buy--link"
-                >Buy</a
-              >
-            </p>
+            <a href="#" class="product__card-link">
+              <h3 class="product__card-heading">Macbook Air</h3>
+              <div class="product__card-image-container">
+                <img
+                  src="../assets/img/Macbook-removebg-preview.png"
+                  alt="macbook air"
+                  class="product__card-image"
+                />
+              </div>
+              <p class="card__paragraph">
+                From $999<a
+                  href="./order.html"
+                  target="_blank"
+                  class="product__buy-link"
+                  >Buy</a
+                >
+              </p>
+            </a>
           </div>
           <ul class="product__list mac-list">
-            <h4 class="product__list--heading">Macbook Air</h4>
-            <li class="product__list--specs">
+            <h4 class="product__list-heading">Macbook Air</h4>
+            <li class="product__list-specs">
               Portable design — Lightweight and under half an inch thin, so you
               can take MacBook Air anywhere you go.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Get more done faster — The powerful 8-core CPU and up to 10-core
               GPU of the Apple M2 chip keep things running smoothly.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Up to 18 hours of battery life — Amazing, all-day battery life so
               you can leave the power adapter at home.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               A brilliant display — The 13.6-inch Liquid Retina display supports
               1 billion colors.
             </li>
-            <li class="product__list--specs last-spec">
+            <li class="product__list-specs last-spec">
               Look sharp, sound great — Everything looks and sounds amazing with
               a 1080p FaceTime HD camera, three mics, and
             </li>
           </ul>
         </section>
-        <section class="product__section--container mac">
+        <section class="product__section-container mac">
           <div class="product__card">
-            <h3 class="product__card--heading">iMac</h3>
-            <div class="product__card-image-container">
-              <img
-                src="../assets/img/imac-removebg-preview.png"
-                alt="imac"
-                class="product__card--image"
-              />
-            </div>
-            <p class="card__paragraph">
-              From $1299<a
-                href="./order.html"
-                target="_blank"
-                class="product__buy--link"
-                >Buy</a
-              >
-            </p>
+            <a href="#" class="product__card-link">
+              <h3 class="product__card-heading">iMac</h3>
+              <div class="product__card-image-container">
+                <img
+                  src="../assets/img/imac-removebg-preview.png"
+                  alt="imac"
+                  class="product__card-image"
+                />
+              </div>
+              <p class="card__paragraph">
+                From $1299<a
+                  href="./order.html"
+                  target="_blank"
+                  class="product__buy-link"
+                  >Buy</a
+                >
+              </p>
+            </a>
           </div>
           <ul class="product__list mac-list">
-            <h4 class="product__list--heading">iMac</h4>
-            <li class="product__list--specs">
+            <h4 class="product__list-heading">iMac</h4>
+            <li class="product__list-specs">
               Portable design — Lightweight and under half an inch thin, so you
               can take MacBook Air anywhere you go.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Get more done faster — The powerful 8-core CPU and up to 10-core
               GPU of the Apple M2 chip keep things running smoothly.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Up to 18 hours of battery life — Amazing, all-day battery life so
               you can leave the power adapter at home.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               A brilliant display — The 13.6-inch Liquid Retina display supports
               1 billion colors.
             </li>
-            <li class="product__list--specs last-spec">
+            <li class="product__list-specs last-spec">
               Look sharp, sound great — Everything looks and sounds amazing with
               a 1080p FaceTime HD camera, three mics, and
             </li>
           </ul>
         </section>
       </section>
+
+      <!-- iPad Section -------- -->
       <h3 class="section__heading">iPad</h3>
       <section class="product__section product__section--ipad">
-        <section class="product__section--container">
+        <section class="product__section-container">
           <div class="product__card">
-            <h3 class="product__card--heading">iPad Pro</h3>
-            <div class="product__card-image-container">
-              <img
-                src="../assets/img/ipad-pro-removebg-preview.png"
-                alt="ipad pro"
-                class="product__card--image"
-              />
-            </div>
-            <p class="card__paragraph">
-              From $999<a
-                href="./order.html"
-                target="_blank"
-                class="product__buy--link"
-                >Buy</a
-              >
-            </p>
+            <a href="#" class="product__card-link">
+              <h3 class="product__card-heading">iPad Pro</h3>
+              <div class="product__card-image-container">
+                <img
+                  src="../assets/img/ipad-pro-removebg-preview.png"
+                  alt="ipad pro"
+                  class="product__card-image"
+                />
+              </div>
+              <p class="card__paragraph">
+                From $999<a
+                  href="./order.html"
+                  target="_blank"
+                  class="product__buy-link"
+                  >Buy</a
+                >
+              </p>
+            </a>
           </div>
 
           <ul class="product__list mac-list">
-            <h4 class="product__list--heading">iPad Pro</h4>
-            <li class="product__list--specs">
+            <h4 class="product__list-heading">iPad Pro</h4>
+            <li class="product__list-specs">
               Portable design — Lightweight and under half an inch thin, so you
               can take MacBook Air anywhere you go.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Get more done faster — The powerful 8-core CPU and up to 10-core
               GPU of the Apple M2 chip keep things running smoothly.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Up to 18 hours of battery life — Amazing, all-day battery life so
               you can leave the power adapter at home.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               A brilliant display — The 13.6-inch Liquid Retina display supports
               1 billion colors.
             </li>
-            <li class="product__list--specs last-spec">
+            <li class="product__list-specs last-spec">
               Look sharp, sound great — Everything looks and sounds amazing with
               a 1080p FaceTime HD camera, three mics, and
             </li>
           </ul>
         </section>
-        <section class="product__section--container">
+        <section class="product__section-container">
           <div class="product__card">
-            <h3 class="product__card--heading">iPad Air</h3>
-            <div class="product__card-image-container">
-              <img
-                src="../assets/img/ipad-air-removebg-preview.png"
-                alt="ipad air"
-                class="product__card--image"
-              />
-            </div>
-            <p class="card__paragraph">
-              From $599<a
-                href="./order.html"
-                target="_blank"
-                class="product__buy--link"
-                >Buy</a
-              >
-            </p>
+            <a href="#" class="product__card-link">
+              <h3 class="product__card-heading">iPad Air</h3>
+              <div class="product__card-image-container">
+                <img
+                  src="../assets/img/ipad-air-removebg-preview.png"
+                  alt="ipad air"
+                  class="product__card-image"
+                />
+              </div>
+              <p class="card__paragraph">
+                From $599<a
+                  href="./order.html"
+                  target="_blank"
+                  class="product__buy-link"
+                  >Buy</a
+                >
+              </p>
+            </a>
           </div>
 
           <ul class="product__list mac-list">
-            <h4 class="product__list--heading">iPad Air</h4>
-            <li class="product__list--specs">
+            <h4 class="product__list-heading">iPad Air</h4>
+            <li class="product__list-specs">
               Portable design — Lightweight and under half an inch thin, so you
               can take MacBook Air anywhere you go.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Get more done faster — The powerful 8-core CPU and up to 10-core
               GPU of the Apple M2 chip keep things running smoothly.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Up to 18 hours of battery life — Amazing, all-day battery life so
               you can leave the power adapter at home.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               A brilliant display — The 13.6-inch Liquid Retina display supports
               1 billion colors.
             </li>
-            <li class="product__list--specs last-spec">
+            <li class="product__list-specs last-spec">
               Look sharp, sound great — Everything looks and sounds amazing with
               a 1080p FaceTime HD camera, three mics, and
             </li>
           </ul>
         </section>
-        <section class="product__section--container">
+        <section class="product__section-container">
           <div class="product__card">
-            <h3 class="product__card--heading">iPad</h3>
-            <div class="product__card-image-container">
-              <img
-                src="../assets/img/ipad-removebg-preview.png"
-                alt="ipad"
-                class="product__card--image"
-              />
-            </div>
-            <p class="card__paragraph">
-              From $349<a
-                href="./order.html"
-                target="_blank"
-                class="product__buy--link"
-                >Buy</a
-              >
-            </p>
+            <a href="#" class="product__card-link">
+              <h3 class="product__card-heading">iPad</h3>
+              <div class="product__card-image-container">
+                <img
+                  src="../assets/img/ipad-removebg-preview.png"
+                  alt="ipad"
+                  class="product__card-image"
+                />
+              </div>
+              <p class="card__paragraph">
+                From $349<a
+                  href="./order.html"
+                  target="_blank"
+                  class="product__buy-link"
+                  >Buy</a
+                >
+              </p>
+            </a>
           </div>
 
           <ul class="product__list mac-list">
-            <h4 class="product__list--heading">iPad</h4>
-            <li class="product__list--specs">
+            <h4 class="product__list-heading">iPad</h4>
+            <li class="product__list-specs">
               Portable design — Lightweight and under half an inch thin, so you
               can take MacBook Air anywhere you go.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Get more done faster — The powerful 8-core CPU and up to 10-core
               GPU of the Apple M2 chip keep things running smoothly.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               Up to 18 hours of battery life — Amazing, all-day battery life so
               you can leave the power adapter at home.
             </li>
-            <li class="product__list--specs">
+            <li class="product__list-specs">
               A brilliant display — The 13.6-inch Liquid Retina display supports
               1 billion colors.
             </li>
-            <li class="product__list--specs last-spec">
+            <li class="product__list-specs last-spec">
               Look sharp, sound great — Everything looks and sounds amazing with
               a 1080p FaceTime HD camera, three mics, and
             </li>
@@ -421,7 +442,7 @@
       </section>
     </main>
     <footer>
-      <section class="footer__list--container">
+      <section class="footer__list-container">
         <ul class="footer-list">
           <h4>Entertainment</h4>
           <li class="footer__list--content">
@@ -502,7 +523,9 @@
       </section>
     </footer>
 
+    <!-- Scripts ------------ -->
     <script src="../js/navbar.js"></script>
+    <script src="../js/products.js"></script>
     <script src="../js/app.js"></script>
   </body>
 </html>
