@@ -2,6 +2,8 @@ const iphoneSection = document.querySelector(".iphone__product-section");
 const macSection = document.querySelector(".mac__product-section");
 const ipadSection = document.querySelector(".ipad__product-section");
 
+const productCategories = ["iphone", "mac", "ipad"];
+
 const productDescriptionList = document.querySelectorAll(".product__list");
 
 // iPhone Products
@@ -123,15 +125,17 @@ const ipadProducts = [
 
 // CLEAR EXISTING CONTENT
 iphoneSection.innerHTML = "";
-macSection.innerHTML = "";
+// macSection.innerHTML = "";
 ipadSection.innerHTML = "";
 
+productCategories;
+
 // Product Content
-// Dynamically populate the iPhone section
-iphoneProducts[0].products.forEach((product) => {
+iphoneProducts.forEach((product) => {
   // Create product container
   const productContainer = document.createElement("div");
   productContainer.classList.add("product__section-container");
+  iphoneSection.append(productContainer);
   // Create product card
   const productCard = document.createElement("div");
   productCard.classList.add("product__card");
@@ -169,21 +173,21 @@ iphoneProducts[0].products.forEach((product) => {
   bottomCardContainer.append(productPrice);
 
   // Buy button
-  const buyButton = document.createElement("a");
+  const buyButton = document.createElement("button");
   buyButton.href = product.buyButton;
   buyButton.textContent = "Buy";
   buyButton.classList.add("product__buy-button");
   bottomCardContainer.append(buyButton);
 
   // Product specs
-  const productSpecs = document.createElement("ul");
-  product.specs.forEach((spec) => {
-    const specItem = document.createElement("li");
-    specItem.textContent = spec;
-    productSpecs.append(specItem);
-  });
-  productContainer.append(productSpecs);
+  //   const productSpecs = document.createElement("ul");
+  //   product.specs.forEach((spec) => {
+  //     const specItem = document.createElement("li");
+  //     specItem.textContent = spec;
+  //     productSpecs.append(specItem);
+  //   });
+  //   productContainer.append(productSpecs);
 
   // Append card to the section
-  iphoneSection.append(productCard);
+  //   iphoneSection.append(productCard);
 });
