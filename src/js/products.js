@@ -1,9 +1,3 @@
-const iphoneSection = document.querySelector(".iphone__product-section");
-const macSection = document.querySelector(".mac__product-section");
-const ipadSection = document.querySelector(".ipad__product-section");
-
-const productDescriptionList = document.querySelectorAll(".product__list");
-
 // iPhone Products
 const iphoneProducts = [
   {
@@ -121,12 +115,16 @@ const ipadProducts = [
   },
 ];
 
+// Product categories
 const productCategories = ["iphone", "mac", "ipad"];
 const productData = {
   iphone: iphoneProducts,
   mac: macProducts,
   ipad: ipadProducts,
 };
+
+// Popup Button Trigger
+const productButtons = document.querySelectorAll(".product__buy-button");
 
 // Loop through each category and populate its section
 productCategories.forEach((category) => {

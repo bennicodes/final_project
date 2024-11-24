@@ -17,6 +17,7 @@ header {
   color: var(--navbar-text-color);
   display: flex;
   align-items: center;
+  gap: var(--spacing-medium);
   font-family: Lato-Regular, sans-serif;
 }
 
@@ -62,6 +63,22 @@ header {
 }
 .navbar__link--active:hover {
   border-bottom: 1px solid var(--navbar-hover-color);
+}
+
+/* Shopping Cart ------------ */
+.shopping__cart-container {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.shopping__cart-icon {
+  color: var(--navbar-text-color);
+}
+
+.shopping__cart-container:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease;
 }
 
 /* STYLES FOR TOGGLE BUTTON ----------- */
