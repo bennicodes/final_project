@@ -2,8 +2,6 @@ const iphoneSection = document.querySelector(".iphone__product-section");
 const macSection = document.querySelector(".mac__product-section");
 const ipadSection = document.querySelector(".ipad__product-section");
 
-const productCategories = ["iphone", "mac", "ipad"];
-
 const productDescriptionList = document.querySelectorAll(".product__list");
 
 // iPhone Products
@@ -41,7 +39,7 @@ const macProducts = [
   {
     name: "MacBook Pro ",
     price: 1999,
-    image: "../assets/img/macbook_pro_14-removebg-preview.png",
+    image: "../assets/img/macbook-pro-removebg-preview.png",
     alt: "MacBook Pro 14-inch",
     specs: [
       "M3 Pro chip delivers blazing-fast performance.",
@@ -53,7 +51,7 @@ const macProducts = [
   },
   {
     name: "MacBook Air 13-inch",
-    price: "From: $999",
+    price: 999,
     image: "../assets/img/Macbook-removebg-preview.png",
     alt: "MacBook Air 13-inch",
     specs: [
@@ -68,7 +66,7 @@ const macProducts = [
   {
     name: "iMac",
     price: 1299,
-    image: "../assets/img/imac_24-removebg-preview.png",
+    image: "../assets/img/imac-removebg-preview.png",
     alt: "iMac 24-inch",
     specs: [
       "Apple M3 chip powers all your favorite apps.",
@@ -85,7 +83,7 @@ const ipadProducts = [
   {
     name: "iPad Pro ",
     price: 1099,
-    image: "../assets/img/ipad_pro_12_9-removebg-preview.png",
+    image: "../assets/img/ipad-pro-removebg-preview.png",
     alt: "iPad Pro 12.9-inch",
     specs: [
       "M3 chip with incredible power and efficiency.",
@@ -98,7 +96,7 @@ const ipadProducts = [
   {
     name: "iPad Air",
     price: 599,
-    image: "../assets/img/ipad_air-removebg-preview.png",
+    image: "../assets/img/ipad-air-removebg-preview.png",
     alt: "iPad Air",
     specs: [
       "A14 Bionic chip delivers powerful performance.",
@@ -123,71 +121,66 @@ const ipadProducts = [
   },
 ];
 
-// CLEAR EXISTING CONTENT
-iphoneSection.innerHTML = "";
-// macSection.innerHTML = "";
-ipadSection.innerHTML = "";
+const productCategories = ["iphone", "mac", "ipad"];
+const productData = {
+  iphone: iphoneProducts,
+  mac: macProducts,
+  ipad: ipadProducts,
+};
 
-productCategories;
+// Loop through each category and populate its section
+productCategories.forEach((category) => {
+  // Get the section corresponding to the current category
+  const section = document.querySelector(`.${category}__product-section`);
+  section.innerHTML = ""; // Clear any existing content
 
-// Product Content
-iphoneProducts.forEach((product) => {
-  // Create product container
-  const productContainer = document.createElement("div");
-  productContainer.classList.add("product__section-container");
-  iphoneSection.append(productContainer);
-  // Create product card
-  const productCard = document.createElement("div");
-  productCard.classList.add("product__card");
-  productContainer.appendChild(productCard);
+  // Get the product list for the current category
+  const products = productData[category];
 
-  const productCardLink = document.createElement("a");
-  productCardLink.href = "#";
-  productCardLink.classList.add("product__card-link");
-  productCard.appendChild(productCardLink);
+  // Loop through the products and create cards
+  products.forEach((product) => {
+    // Create product container
+    const productContainer = document.createElement("div");
+    productContainer.classList.add("product__section-container");
+    section.appendChild(productContainer);
 
-  // Product name
-  const productName = document.createElement("h3");
-  productName.textContent = product.name;
-  productName.classList.add("product__card-heading");
-  productCardLink.append(productName);
+    // Create product card
+    const productCard = document.createElement("button");
+    productCard.classList.add("product__card");
+    productContainer.appendChild(productCard);
 
-  // Product image
-  const productImageContainer = document.createElement("div");
-  productImageContainer.classList.add("product__card-image-container");
-  productCardLink.append(productImageContainer);
-  const productImage = document.createElement("img");
-  productImage.src = product.image;
-  productImage.alt = product.alt;
-  productImage.classList.add("product__card-image");
-  productImageContainer.append(productImage);
+    // Product name
+    const productName = document.createElement("h3");
+    productName.textContent = product.name;
+    productName.classList.add("product__card-heading");
+    productCard.appendChild(productName);
 
-  // Bottom Card Container
-  const bottomCardContainer = document.createElement("div");
-  bottomCardContainer.classList.add("bottom__card-container");
-  productCardLink.append(bottomCardContainer);
+    // Product image
+    const productImageContainer = document.createElement("div");
+    productImageContainer.classList.add("product__card-image-container");
+    productCard.appendChild(productImageContainer);
 
-  // Product price
-  const productPrice = document.createElement("p");
-  productPrice.textContent = "$" + product.price;
-  bottomCardContainer.append(productPrice);
+    const productImage = document.createElement("img");
+    productImage.src = product.image;
+    productImage.alt = product.alt;
+    productImage.classList.add("product__card-image");
+    productImageContainer.appendChild(productImage);
 
-  // Buy button
-  const buyButton = document.createElement("button");
-  buyButton.href = product.buyButton;
-  buyButton.textContent = "Buy";
-  buyButton.classList.add("product__buy-button");
-  bottomCardContainer.append(buyButton);
+    // Bottom card container
+    const bottomCardContainer = document.createElement("div");
+    bottomCardContainer.classList.add("bottom__card-container");
+    productCard.appendChild(bottomCardContainer);
 
-  // Product specs
-  //   const productSpecs = document.createElement("ul");
-  //   product.specs.forEach((spec) => {
-  //     const specItem = document.createElement("li");
-  //     specItem.textContent = spec;
-  //     productSpecs.append(specItem);
-  //   });
-  //   productContainer.append(productSpecs);
+    // Product price
+    const productPrice = document.createElement("p");
+    productPrice.textContent = `$${product.price}`;
+    bottomCardContainer.appendChild(productPrice);
 
-  // Append card to the section
-  //   iphoneSection.append(productCard);
+    // Buy button
+    const buyButton = document.createElement("button");
+    buyButton.href = product.buyButton;
+    buyButton.textContent = "Buy";
+    buyButton.classList.add("product__buy-button");
+    bottomCardContainer.appendChild(buyButton);
+  });
 });

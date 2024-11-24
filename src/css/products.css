@@ -128,22 +128,11 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   padding: var(--spacing-medium) 0;
+  gap: var(--spacing-small);
   border-radius: 16px;
   border: 1px solid #e0e0e0;
-  font-size: var(--font-size-meduim);
-}
-
-.product__card .product__card-link {
-  color: inherit;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.product__card a {
-  text-decoration: none;
+  font-size: var(--font-size-base);
+  cursor: pointer;
 }
 
 .product__card-heading {
@@ -167,6 +156,7 @@ main {
 }
 
 .bottom__card-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
