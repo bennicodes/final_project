@@ -52,7 +52,7 @@ main {
   justify-content: space-between;
 }
 
-.product__section--ipad {
+.ipad__product-section {
   border: none;
 }
 
@@ -88,11 +88,13 @@ main {
   height: 100%;
   display: flex;
   align-items: center;
+  padding: var(--spacing-small);
 }
 
 .product__card-image-container img {
   width: 100%;
   object-fit: cover;
+  padding: 0 var(--spacing-small);
 }
 
 .product__card-heading {
@@ -100,12 +102,16 @@ main {
   font-weight: 600;
 }
 
-.card__paragraph {
+.bottom__card-container {
+  display: flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: var(--spacing-large);
   padding: 0 var(--spacing-medium);
+}
+
+.card__paragraph {
   font-size: var(--font-size-base);
 }
 
@@ -159,7 +165,7 @@ main {
 
 .product__card:hover {
   box-shadow: var(--card-hover-shadow);
-  .product__card--image {
+  .product__card-image {
     transform: scale(1.05);
     transition: transform 0.3s ease;
   }
