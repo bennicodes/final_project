@@ -19,9 +19,9 @@ header {
   align-items: center;
   gap: var(--spacing-medium);
   font-family: Lato-Regular, sans-serif;
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 0; */
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1;
 }
 
@@ -69,37 +69,13 @@ header {
   border-bottom: 1px solid var(--navbar-hover-color);
 }
 
-/* Shopping Cart ------------ */
-.shopping__cart-container {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  position: relative;
-}
-
-.shopping__cart-icon {
-  color: var(--navbar-text-color);
-}
-
-.shopping__cart-container:hover {
-  transform: scale(1.2);
-  transition: all 0.2s ease;
-}
-
-.shopping__cart-counter {
-  position: absolute;
-  top: -10px;
-  right: -5px;
-  background-color: var(--primary-navbar-color);
-  color: var(--navbar-text-color);
-}
-
 /* STYLES FOR TOGGLE BUTTON ----------- */
 .navbar__toggle-button-container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: var(--spacing-medium);
+  z-index: 1;
 }
 
 .navbar__toggle-button {
