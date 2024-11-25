@@ -38,44 +38,42 @@ main {
 /* Background overlay */
 
 /* Popup window ------------- */
-.popup__background-overlay {
-  display: none;
-}
-
-.popup__background-overlay--active {
+.popup__container-overlay--active {
   z-index: 1;
   display: block;
+  background-color: var(--overlay-background-color);
 }
 
 .popup__container {
-  width: 60%;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   position: fixed;
-  top: 10%;
-  left: 20%;
+  top: 0;
+  left: 0;
   flex-direction: column;
   justify-content: space-between;
-  z-index: -1;
-  border: 1px solid #cfcfcf;
-  border-radius: 5%;
-  background-color: #fff;
-  padding: var(--spacing-medium);
   display: none;
 }
 
 .popup__container--active {
   display: flex;
-  z-index: 2;
 }
 
 .popup__window {
-  width: 100%;
-  height: 100%;
+  background-color: #fff;
+  width: 60%;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-medium);
+  padding: var(--spacing-medium) var(--spacing-medium) var(--spacing-large)
+    var(--spacing-medium);
   position: relative;
+  border: 1px solid #cfcfcf;
+  border-radius: 5%;
+  top: 20%;
+  left: 20%;
 }
 
 .popup__image-container {
@@ -92,21 +90,11 @@ main {
   object-fit: contain;
 }
 
-.popup__description {
-  width: 100%;
-  height: 100%;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: var(--spacing-medium);
-}
-
 /* Close Button ---------- */
 .popup__close-button {
   position: absolute;
-  top: 10px;
-  right: 12px;
+  top: 24px;
+  right: 32px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -117,12 +105,22 @@ main {
 }
 
 /* Popup Description */
+.popup__description {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding-top: var(--spacing-medium); */
+}
+
 .popup__description-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-x-large) var(--spacing-large) 0 0;
+  padding: var(--spacing-x-large) var(--spacing-x-large) 0 0;
   gap: var(--spacing-medium);
 }
 
@@ -137,6 +135,7 @@ main {
 }
 
 .popup__product-list li {
+  width: 90%;
   padding: var(--spacing-medium) 0;
   list-style: circle;
 }

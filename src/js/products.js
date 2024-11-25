@@ -127,6 +127,7 @@ const popupContainer = document.querySelector(".popup__container");
 const popupHeading = document.querySelector(".popup__heading");
 const popupImage = document.querySelector(".popup__product-image");
 const popupSpecs = document.querySelector(".popup__product-list");
+const popupBuyButton = document.querySelector("#popup__buy-button");
 const closePopupButton = document.querySelector(".popup__close-button");
 
 // Function to open the popup
@@ -135,6 +136,9 @@ function openPopup(product) {
     console.error("Popup container or specs list not found.");
     return;
   }
+
+  //   Popup buy button
+  popupBuyButton.textContent = "Buy";
 
   // Update product details in the popup
   popupHeading.textContent = product.name;
@@ -154,18 +158,27 @@ function openPopup(product) {
   });
 
   // Show the popup
-  popupContainer.classList.add("popup__container--active");
+  popupContainer.classList.add(
+    "popup__container--active",
+    "popup__container-overlay--active"
+  );
 }
 
-// TODO: fix click outside of popup closes. Add background overlay when popup is open.
+// TODO: Add background overlay when popup is open.
 // Close popup
 function closePopupAction() {
-  popupContainer.classList.remove("popup__container--active");
+  popupContainer.classList.remove(
+    "popup__container--active",
+    "popup__container-overlay--active"
+  );
 }
 
 // Function to close the popup
 function closePopup() {
-  popupContainer.classList.remove("popup__container--active");
+  popupContainer.classList.remove(
+    "popup__container--active",
+    "popup__container-overlay--active"
+  );
 }
 
 // Add event listener to the close button
@@ -174,28 +187,29 @@ if (closePopupButton) {
 }
 
 popupContainer.addEventListener("click", (e) => {
-  //
-  if (!e.target.closest(".popup__window")) {
+  // Close the popup only if the click target is the container, not the popup window or its children
+  if (e.target === popupContainer) {
     closePopup();
   }
 });
 
+// Sort products to the right category -------
 productCategories.forEach((category) => {
-  // Get the section corresponding to the current category
   const section = document.querySelector(`.${category}__product-section`);
-  section.innerHTML = ""; // Clear any existing content
+  //   Clear existing content
+  section.innerHTML = "";
 
   // Get the product list for the current category
   const products = productData[category];
 
   // Loop through the products and create cards
   products.forEach((product) => {
-    // Create product container
+    // Product container
     const productContainer = document.createElement("div");
     productContainer.classList.add("product__section-container");
     section.appendChild(productContainer);
 
-    // Create product card
+    // Product card
     const productCard = document.createElement("button");
     productCard.classList.add("product__card");
     productContainer.appendChild(productCard);
@@ -217,7 +231,7 @@ productCategories.forEach((category) => {
     productImage.classList.add("product__card-image");
     productImageContainer.appendChild(productImage);
 
-    // Bottom card container
+    // Bottom card container -------------
     const bottomCardContainer = document.createElement("div");
     bottomCardContainer.classList.add("bottom__card-container");
     productCard.appendChild(bottomCardContainer);
