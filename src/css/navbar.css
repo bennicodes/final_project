@@ -19,6 +19,10 @@ header {
   align-items: center;
   gap: var(--spacing-medium);
   font-family: Lato-Regular, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* LOGO STYLE --------------- */
@@ -46,6 +50,7 @@ header {
   display: flex;
   gap: var(--spacing-x-large);
   justify-content: center;
+  z-index: 10;
 }
 
 .navbar__links a {
@@ -133,6 +138,7 @@ header {
     top: 0;
     right: -1000px;
     width: 50%;
+    height: 100%;
     flex-direction: column;
     transition: 1s;
     background-color: var(--primary-navbar-color);

@@ -2,7 +2,7 @@
 const iphoneProducts = [
   {
     name: "iPhone 16 Pro & Pro Max",
-    price: 999,
+    price: 999.0,
     image: "../assets/img/iphone_16_pro_max-removebg-preview.png",
     alt: "iPhone 16 Pro",
     specs: [
@@ -15,7 +15,7 @@ const iphoneProducts = [
   },
   {
     name: "iPhone 16 & iPhone 16 Plus",
-    price: 799,
+    price: 799.0,
     image: "../assets/img/iphone-16-reg-removebg-preview.png",
     alt: "iPhone 16",
     specs: [
@@ -26,12 +26,25 @@ const iphoneProducts = [
     ],
     buyButton: "Buy",
   },
+  {
+    name: "iPhone SE",
+    price: 429.0,
+    image: "../assets/img/iphone-SE-removebg-preview.png",
+    alt: "iPhone SE",
+    specs: [
+      "4.7-inch Retina HD display footnote ¹ that’s bright, colorful, and sharp.",
+      "A15 Bionic, the same superpowerful chip that’s in iPhone 13.",
+      "5G for fast downloads and high-quality streaming.",
+      "Smarter camera makes automatic adjustments so faces, places, everything looks fabulous",
+    ],
+    buyButton: "Buy",
+  },
 ];
 
 const macProducts = [
   {
     name: "MacBook Pro ",
-    price: 1599,
+    price: 1599.0,
     image: "../assets/img/macbook-pro-removebg-preview.png",
     alt: "MacBook Pro 14-inch",
     specs: [
@@ -44,7 +57,7 @@ const macProducts = [
   },
   {
     name: "MacBook Air 13-inch",
-    price: 999,
+    price: 999.0,
     image: "../assets/img/Macbook-removebg-preview.png",
     alt: "MacBook Air 13-inch",
     specs: [
@@ -58,7 +71,7 @@ const macProducts = [
   },
   {
     name: "iMac",
-    price: 1299,
+    price: 1299.0,
     image: "../assets/img/imac-removebg-preview.png",
     alt: "iMac 24-inch",
     specs: [
@@ -74,7 +87,7 @@ const macProducts = [
 const ipadProducts = [
   {
     name: "iPad Pro ",
-    price: 1099,
+    price: 1099.0,
     image: "../assets/img/ipad-pro-removebg-preview.png",
     alt: "iPad Pro 12.9-inch",
     specs: [
@@ -87,7 +100,7 @@ const ipadProducts = [
   },
   {
     name: "iPad Air",
-    price: 599,
+    price: 599.0,
     image: "../assets/img/ipad-air-removebg-preview.png",
     alt: "iPad Air",
     specs: [
@@ -100,7 +113,7 @@ const ipadProducts = [
   },
   {
     name: "iPad",
-    price: 349,
+    price: 349.0,
     image: "../assets/img/ipad-removebg-preview.png",
     alt: "iPad",
     specs: [
@@ -113,12 +126,101 @@ const ipadProducts = [
   },
 ];
 
+const airpodsProducts = [
+  {
+    name: "AirPods 4 ",
+    price: 129.0,
+    image: "../assets/img/airpods-4-removebg-preview.png",
+    alt: "airpods 4",
+    specs: [
+      "Personalized Spatial Audio with dynamic head tracking.",
+      "Voice Isolation, Hey Siri, and Siri Interactions",
+      "Supports Apple Pencil (2nd generation).",
+      "Up to 5 hours of listening time on a single charge.",
+      "Up to 30 hours total of listening time, using the case",
+    ],
+    buyButton: "Buy",
+  },
+  {
+    name: "AirPods Pro 2 ",
+    price: 249.0,
+    image: "../assets/img/airpods-pro-2-removebg-preview.png",
+    alt: "airpods pro 2",
+    specs: [
+      "Up to 2x more Active Noise Cancellation, with Adaptive Audio and Transparency mode",
+      "Personalized Spatial Audio with dynamic head tracking",
+      "Voice Isolation, Hey Siri, and Siri Interactions",
+      "Up to 6 hours of listening time on a single charge with Active Noise Cancellation enabled",
+      "Up to 30 hours total of listening time with Active Noise Cancellation enabled, using the case",
+    ],
+    buyButton: "Buy",
+  },
+  {
+    name: "AirPods  Max ",
+    price: 549,
+    image: "../assets/img/airpods-max-removebg-preview.png",
+    alt: "airpods max",
+    specs: [
+      "Up to 2x more Active Noise Cancellation, with Transparency mode",
+      "Personalized Spatial Audio with dynamic head tracking",
+      "Voice Isolation, Hey Siri, and Siri Interactions",
+      "Up to 20 hours of listening time on a single charge with Active Noise Cancellation enabled Footnote ⁸",
+    ],
+    buyButton: "Buy",
+  },
+];
+const appleWatchProducts = [
+  {
+    name: "Apple Watch Series 10",
+    price: 399.0,
+    image: "../assets/img/apple-watch-series-10-removebg-preview.png",
+    alt: "apple watch series 10",
+    specs: [
+      "The thinnest Apple Watch ever, with our biggest display. With a new Wide-Angle Always-On OLED Retina display.",
+      "Get health insights day and night. Now with sleep apnea notifications  footnote  ",
+      "Track all your workouts and activity. New sensors for water sports.",
+      "Faster charging gives you up to 80 percent battery in 30 minutes",
+      "Get help in an emergency or if you fall or are in a car crash.",
+    ],
+    buyButton: "Buy",
+  },
+  {
+    name: "Apple Watch Ultra 2",
+    price: 799.0,
+    image: "../assets/img/apple-watch-ultra-2-removebg-preview.png",
+    alt: "Apple Watch Ultra 2",
+    specs: [
+      "The ultimate sports and adventure watch has a rugged 49mm titanium case with 100-meter water resistance and IP6X dust resistance. Now in black.",
+      "The most accurate GPS in a sports watch.",
+      "Customizable Action button controls a variety of functions. Quickly switch between starting a workout, marking a Compass Waypoint, beginning a dive, and more.",
+      "Up to 36 hours of battery life, up to 72 hours on low power settings, and up to 17 hours of workout use in Low Power Mode.",
+      "Up to 30 hours total of listening time with Active Noise Cancellation enabled, using the case.",
+    ],
+    buyButton: "Buy",
+  },
+  {
+    name: "Apple Watch SE",
+    price: 249,
+    image: "../assets/img/apple-watch-se-removebg-preview.png",
+    alt: "Apple Watch SE",
+    specs: [
+      "Set up Apple Watch For Your Kids,  even if they don’t have their own iPhone.",
+      "Stay active with a range of workout types and motivating metrics.",
+      "With a cellular plan you can call and text, even without your iPhone.",
+      "Get help in an emergency or if you fall or are in a car crash",
+    ],
+    buyButton: "Buy",
+  },
+];
+
 // Product categories
-const productCategories = ["iphone", "mac", "ipad"];
+const productCategories = ["iphone", "mac", "ipad", "airpods", "watch"];
 const productData = {
   iphone: iphoneProducts,
   mac: macProducts,
   ipad: ipadProducts,
+  airpods: airpodsProducts,
+  watch: appleWatchProducts,
 };
 
 const main = document.querySelector("main");
@@ -164,7 +266,6 @@ function openPopup(product) {
   );
 }
 
-// TODO: Add background overlay when popup is open.
 // Close popup
 function closePopupAction() {
   popupContainer.classList.remove(
@@ -186,8 +287,8 @@ if (closePopupButton) {
   closePopupButton.addEventListener("click", closePopup);
 }
 
+// Close the popup wehn user clicks outside of popup
 popupContainer.addEventListener("click", (e) => {
-  // Close the popup only if the click target is the container, not the popup window or its children
   if (e.target === popupContainer) {
     closePopup();
   }

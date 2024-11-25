@@ -1,6 +1,11 @@
+/* FONT IMPORT */
 @font-face {
   font-family: Lato-Regular;
-  src: url(/src/assets/fonts/Lato-Regular.ttf);
+  src: url(../assets/fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Bold;
+  src: url(../assets/fonts/Lato-Bold.ttf);
 }
 
 body {
@@ -25,6 +30,8 @@ main {
   border-bottom: 1px solid #000;
   margin-left: var(--spacing-small);
   padding-bottom: var(--spacing-small);
+  font-family: Lato-Bold, sans-serif;
+  font-weight: 400;
 }
 
 .main-heading {
@@ -33,10 +40,10 @@ main {
 
 .section__heading {
   padding: 2rem 0 1rem 2rem;
-  font-weight: 600;
+  font-weight: 700;
 }
-/* Background overlay */
 
+/* Background overlay */
 /* Popup window ------------- */
 .popup__container-overlay--active {
   z-index: 1;
@@ -94,7 +101,7 @@ main {
 .popup__close-button {
   position: absolute;
   top: 24px;
-  right: 32px;
+  right: 24px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -111,8 +118,8 @@ main {
   max-height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* padding-top: var(--spacing-medium); */
+  justify-content: space-evenly;
+  gap: var(--spacing-large);
 }
 
 .popup__description-header {
@@ -120,13 +127,15 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-x-large) var(--spacing-x-large) 0 0;
+  padding: var(--spacing-large) var(--spacing-x-large) 0 0;
   gap: var(--spacing-medium);
 }
 
 .popup__heading {
   font-size: var(--font-size-medium);
   font-weight: bold;
+  font-family: Lato-Bold, sans-serif;
+  flex-basis: 50%;
 }
 
 .popup__product-buy-button {
@@ -153,6 +162,8 @@ main {
 }
 
 .product__section-container {
+  height: var(--card-height);
+  width: var(--card-width);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-x-large);
@@ -165,9 +176,10 @@ main {
 
 /* Product Card */
 .product__card {
+  position: relative;
   background-color: #fff;
-  width: var(--card-width);
-  height: var(--card-height);
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -187,10 +199,11 @@ main {
 }
 
 .product__card-heading {
-  padding: var(--spacing-medium) 0;
-  padding-left: var(--spacing-medium);
+  width: 75%;
+  padding: var(--spacing-medium) var(--spacing-medium);
   font-weight: 500;
   font-size: var(--font-size-medium);
+  text-align: start;
 }
 
 .product__card-image-container {
@@ -198,7 +211,8 @@ main {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: var(--spacing-small);
+  justify-content: center;
+  padding: 0 var(--spacing-small);
 }
 
 .product__card-image-container img {
@@ -212,7 +226,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-small) var(--spacing-medium);
+  padding: 0 var(--spacing-medium);
 }
 
 .card__paragraph {
@@ -237,6 +251,29 @@ main {
   transition: 0.3s ease;
 }
 
+.product__learn-more-button {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: #000;
+  color: #fff;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 1.5px solid #000;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.product__learn-more-button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+/* TODO: Add media queries to popup window */
 /* Media queries */
 @media screen and (max-width: 1200px) {
   main {
