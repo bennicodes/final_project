@@ -266,6 +266,8 @@ function openPopup(product) {
   );
 }
 
+// TODO: Add scroll feature when content doesn't fit
+
 // Close popup
 function closePopupAction() {
   popupContainer.classList.remove(
