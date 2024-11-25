@@ -70,6 +70,7 @@ header {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 .shopping__cart-icon {
@@ -79,6 +80,14 @@ header {
 .shopping__cart-container:hover {
   transform: scale(1.2);
   transition: all 0.2s ease;
+}
+
+.shopping__cart-counter {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  background-color: var(--primary-navbar-color);
+  color: var(--navbar-text-color);
 }
 
 /* STYLES FOR TOGGLE BUTTON ----------- */

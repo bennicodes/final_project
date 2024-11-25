@@ -1,4 +1,4 @@
-// iPhone Products
+// Products
 const iphoneProducts = [
   {
     name: "iPhone 16 Pro & Pro Max",
@@ -11,7 +11,7 @@ const iphoneProducts = [
       "A18 Pro chip powers Apple Intelligence and AAA gaming — and helps deliver a huge leap in battery life.",
       "4K 120 fps Dolby Vision and 4 studio-quality mics. A Pro studio in your pocket.",
     ],
-    buyButton: "./order.html",
+    buyButton: "Buy",
   },
   {
     name: "iPhone 16 & iPhone 16 Plus",
@@ -24,24 +24,23 @@ const iphoneProducts = [
       "A18 chip enables Apple Intelligence and console-level gaming with exceptional power efficiency.",
       "A big boost in battery life with up to 22 hours of video playback.",
     ],
-    buyButton: "./order.html",
+    buyButton: "Buy",
   },
 ];
 
-// Mac Products
 const macProducts = [
   {
     name: "MacBook Pro ",
-    price: 1999,
+    price: 1599,
     image: "../assets/img/macbook-pro-removebg-preview.png",
     alt: "MacBook Pro 14-inch",
     specs: [
-      "M3 Pro chip delivers blazing-fast performance.",
-      "Liquid Retina XDR display for stunning visuals.",
-      "Up to 22 hours of battery life for all-day work.",
-      "A full suite of ports for ultimate connectivity.",
+      "Supercharged by M4, M4 Pro, or M4 Max, MacBook Pro empowers you to take on the most demanding projects",
+      "Go all day and night with up to 24 hours of battery life",
+      "Apple Intelligence. Personal, private, powerful.",
+      "The 14.2-inch Liquid Retina XDR display features 1,600 nits peak brightness and up to 1,000 nits sustained brightness, 1,000,000:1 contrast. With nano‑texture option.",
     ],
-    buyButton: "./order.html",
+    buyButton: "Buy",
   },
   {
     name: "MacBook Air 13-inch",
@@ -55,7 +54,7 @@ const macProducts = [
       "Slim and lightweight design for portability.",
       "Two Thunderbolt / USB 4 ports.",
     ],
-    buyButton: "./order.html",
+    buyButton: "Buy",
   },
   {
     name: "iMac",
@@ -63,16 +62,15 @@ const macProducts = [
     image: "../assets/img/imac-removebg-preview.png",
     alt: "iMac 24-inch",
     specs: [
-      "Apple M3 chip powers all your favorite apps.",
-      "4.5K Retina display delivers exceptional clarity.",
-      "Available in 7 vibrant colors.",
-      "Ultra-thin design with a seamless all-in-one setup.",
+      "An all-in-one desktop, iMac is strikingly thin, comes in seven vibrant colors, and complements any room",
+      "The powerful M4 chip with an up to 10-core CPU and up to 10-core GPU keeps things running smoothly",
+      "Apple Intelligence. Personal, private, powerful.",
+      "The 24-inch 4.5K Retina display features 500 nits of brightness and supports up to 1 billion colors, with a nano-texture option for reduced glare in very bright settings",
     ],
-    buyButton: "./order.html",
+    buyButton: "Buy",
   },
 ];
 
-// iPad Products
 const ipadProducts = [
   {
     name: "iPad Pro ",
@@ -85,7 +83,7 @@ const ipadProducts = [
       "Supports Apple Pencil (2nd generation).",
       "5G connectivity for lightning-fast downloads.",
     ],
-    buyButton: "./order.html",
+    buyButton: "Buy",
   },
   {
     name: "iPad Air",
@@ -98,7 +96,7 @@ const ipadProducts = [
       "Compatible with Magic Keyboard and Apple Pencil.",
       "All-day battery life for work and play.",
     ],
-    buyButton: "./order.html",
+    buyButton: "Buy",
   },
   {
     name: "iPad",
@@ -111,7 +109,7 @@ const ipadProducts = [
       "Landscape 12MP Ultra Wide front camera with Center Stage for a great video calling experience.",
       "Stay connected with fast Wi‑Fi 6 and 5G wireless.",
     ],
-    buyButton: "./order.html",
+    buyButton: "Buy",
   },
 ];
 
@@ -123,10 +121,62 @@ const productData = {
   ipad: ipadProducts,
 };
 
-// Popup Button Trigger
-const productButtons = document.querySelectorAll(".product__buy-button");
+const popupContainer = document.querySelector(".popup__container");
+const popupHeading = document.querySelector(".popup__heading");
+const popupImage = document.querySelector(".popup__product-image");
+const popupSpecs = document.querySelector(".popup__product-list");
+const closePopupButton = document.querySelector(".popup__close-button");
 
-// Loop through each category and populate its section
+// Function to open the popup
+function openPopup(product) {
+  if (!popupContainer || !popupSpecs) {
+    console.error("Popup container or specs list not found.");
+    return;
+  }
+
+  // Update product details in the popup
+  popupHeading.textContent = product.name;
+  popupImage.src = product.image;
+  popupImage.alt = product.alt;
+
+  // Clear existing specs and add new ones
+  popupSpecs.innerHTML = "";
+
+  product.specs.forEach((spec) => {
+    const specItem = document.createElement("li");
+    specItem.textContent = spec;
+    specItem.classList.add("popup__product-list-specs");
+
+    // Append each spec as a list item
+    popupSpecs.appendChild(specItem);
+  });
+
+  // Show the popup
+  popupContainer.classList.add("popup__container--active");
+}
+
+// Close popup
+function closePopupAction() {
+  popupContainer.classList.remove("popup__container--active");
+}
+
+// Function to close the popup
+function closePopup() {
+  popupContainer.classList.remove("popup__container--active");
+}
+
+// Add event listener to the close button
+if (closePopupButton) {
+  closePopupButton.addEventListener("click", closePopup);
+}
+
+// Close popup when clicking outside the popup window
+popupContainer.addEventListener("click", (event) => {
+  if (event.target === popupContainer) {
+    closePopup();
+  }
+});
+
 productCategories.forEach((category) => {
   // Get the section corresponding to the current category
   const section = document.querySelector(`.${category}__product-section`);
@@ -180,5 +230,10 @@ productCategories.forEach((category) => {
     buyButton.textContent = "Buy";
     buyButton.classList.add("product__buy-button");
     bottomCardContainer.appendChild(buyButton);
+
+    // Event listener to open the popup
+    productCard.addEventListener("click", () => {
+      openPopup(product);
+    });
   });
 });
