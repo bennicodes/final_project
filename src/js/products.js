@@ -121,6 +121,8 @@ const productData = {
   ipad: ipadProducts,
 };
 
+const main = document.querySelector("main");
+
 const popupContainer = document.querySelector(".popup__container");
 const popupHeading = document.querySelector(".popup__heading");
 const popupImage = document.querySelector(".popup__product-image");
@@ -155,6 +157,7 @@ function openPopup(product) {
   popupContainer.classList.add("popup__container--active");
 }
 
+// TODO: fix click outside of popup closes. Add background overlay when popup is open.
 // Close popup
 function closePopupAction() {
   popupContainer.classList.remove("popup__container--active");
@@ -170,9 +173,9 @@ if (closePopupButton) {
   closePopupButton.addEventListener("click", closePopup);
 }
 
-// Close popup when clicking outside the popup window
-popupContainer.addEventListener("click", (event) => {
-  if (event.target === popupContainer) {
+popupContainer.addEventListener("click", (e) => {
+  //
+  if (!e.target.closest(".popup__window")) {
     closePopup();
   }
 });
