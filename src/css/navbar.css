@@ -19,9 +19,9 @@ header {
   align-items: center;
   gap: var(--spacing-medium);
   font-family: Lato-Regular, sans-serif;
-  position: fixed;
-  top: 0;
-  left: 0;
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
   z-index: 1;
 }
 
@@ -50,7 +50,6 @@ header {
   display: flex;
   gap: var(--spacing-x-large);
   justify-content: center;
-  z-index: 10;
 }
 
 .navbar__links a {
@@ -134,14 +133,19 @@ header {
   }
 
   .navbar__links {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: -1000px;
     width: 50%;
-    height: 100%;
+    height: 100vh;
     flex-direction: column;
     transition: 1s;
     background-color: var(--primary-navbar-color);
+  }
+
+  .navbar__links--active {
+    right: 0;
+    z-index: 1;
   }
 
   .navbar__link a {
@@ -152,10 +156,6 @@ header {
   .navbar__link a:hover {
     background-color: #d5d5d53d;
     transition: all 0.2s ease;
-  }
-
-  .navbar__links--active {
-    right: 0;
   }
 }
 
