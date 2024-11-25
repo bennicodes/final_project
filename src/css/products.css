@@ -83,7 +83,9 @@ main {
   border-radius: 5%;
   top: 20%;
   left: 20%;
-  overflow-y: auto;
+  overflow-y: scroll;
+  /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
 }
 
 .popup__image-container {
@@ -124,6 +126,9 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   gap: var(--spacing-large);
+  overflow-y: scroll;
+  /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
 }
 
 .popup__description-header {
@@ -297,12 +302,6 @@ main {
 }
 
 @media screen and (max-width: 940px) {
-  .product__section {
-    gap: var(--spacing-large);
-  }
-}
-
-@media screen and (max-width: 768px) {
   .popup__window {
     width: 80%;
     max-height: 400px;
@@ -322,6 +321,12 @@ main {
   }
 
   .product__section {
+    gap: var(--spacing-large);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product__section {
     flex-direction: column;
     gap: var(--spacing-x-large);
   }
@@ -335,9 +340,9 @@ main {
   .popup__container {
   }
   .popup__window {
-    width: 90%;
+    width: 100%;
     max-height: 400px;
-    left: 5%;
+    left: 0;
   }
 
   .popup__description {

@@ -22,7 +22,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* LOGO STYLE --------------- */
@@ -52,13 +52,13 @@ header {
   justify-content: center;
 }
 
-.navbar__links a {
+.navbar__link a {
   color: inherit;
   font-size: var(--font-size-base);
 }
 
-.navbar__links a:hover {
-  color: var(--hover-color);
+.navbar__link a:hover {
+  color: var(--navbar-hover-color);
   cursor: pointer;
 }
 

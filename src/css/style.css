@@ -2,6 +2,11 @@
   font-family: Lato-Regular;
   src: url(../assets/fonts/Lato-Regular.ttf);
 }
+@font-face {
+  font-family: Lato-Bold;
+  src: url(../assets/fonts/Lato-Bold.ttf);
+}
+
 body {
   min-width: 340px;
   width: 100%;
@@ -9,4 +14,251 @@ body {
   overflow-x: hidden;
   background-color: var(--background-color);
   font-family: Lato-Regular, sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--spacing-x-large);
+}
+
+.hero-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-x-large);
+  gap: var(--spacing-large);
+}
+
+/* PRODUCTS ---------- */
+/* Mac section */
+.mac__section {
+  background-color: var(--primary-navbar-color);
+  color: var(--navbar-text-color);
+  width: 100%;
+  border-radius: var(--product-card-border-radius);
+  display: flex;
+  padding: var(--spacing-medium);
+}
+
+.mac__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  color: inherit;
+  gap: var(--spacing-medium);
+}
+
+.card__header-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.product__logo {
+  width: 24px;
+  height: auto;
+}
+
+.product__heading {
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  text-align: center;
+  padding: var(--spacing-small);
+}
+
+.product__price {
+  padding: var(--spacing-medium);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.product__buy-button {
+  background-color: var(--button-color);
+  color: #fff;
+  width: 60px;
+  height: 35px;
+  text-align: center;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 1.5px solid var(--button-color);
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+.product__buy-button:hover {
+  background-color: #fff;
+  color: var(--button-color);
+  transition: 0.2s ease;
+}
+
+.product__link {
+  background-color: var(--product-link-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  padding: var(--spacing-small);
+}
+
+.product__link:hover {
+  background-color: var(--button-color);
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.mac__image-container {
+  width: 100%;
+  height: 100%;
+  flex-basis: 50%;
+  padding: var(--spacing-small);
+  object-fit: cover;
+}
+
+.product__image {
+  width: 75%;
+  height: auto;
+  object-fit: cover;
+}
+
+.ipad__section {
+  display: flex;
+  gap: var(--spacing-large);
+  width: 100%;
+  height: 500px;
+}
+
+.ipad__container {
+  width: 100%;
+  height: 100%;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: var(--product-card-border-radius);
+  padding: var(--spacing-large);
+}
+
+.ipad__image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ipad-pro {
+  background-color: #000;
+  color: #fff;
+}
+
+.ipad-air {
+  background-color: #ebe9e9;
+  color: #000;
+}
+
+/* iPhone Section ------------ */
+.iphone__section {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iphone__image-container {
+  background-image: url(../assets/img/iphone-16-header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: var(--spacing-large) 0;
+  border-radius: var(--product-card-border-radius);
+}
+
+.iphone__button-container {
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
+}
+
+/* ACCESSORIES SECTION ------- */
+.accessories__section {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: var(--spacing-large);
+}
+
+.airpods__container {
+  background-color: #ebe9e9;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large);
+  border-radius: var(--product-card-border-radius);
+}
+
+.airpods__image-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 75%;
+}
+
+.watch__container {
+  background-color: #000;
+  width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-large);
+  padding: var(--spacing-large);
+  border-radius: var(--product-card-border-radius);
+}
+
+.watch__container h2 {
+  color: #fff;
+}
+
+.watch__container p {
+  color: #ff9900fd;
+}
+
+.watch__image-container {
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
 }

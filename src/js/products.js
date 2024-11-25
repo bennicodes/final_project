@@ -266,7 +266,7 @@ function openPopup(product) {
   );
 }
 
-// TODO: Add scroll feature when content doesn't fit
+// TODO: Add learn more button when hovering
 
 // Close popup
 function closePopupAction() {

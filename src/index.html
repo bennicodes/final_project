@@ -49,7 +49,8 @@
           <p class="shopping__cart-counter">0</p>
         </button>
 
-        <div class="shopping__cart-item-container"></div>
+        <!-- Shopping cart item container -->
+        <!-- <div class="shopping__cart-item-container"></div> -->
 
         <!-- TOGGLE BUTTON ----------- -->
         <div class="navbar__toggle-button-container">
@@ -60,19 +61,256 @@
       </nav>
 
       <!-- HEADER CONTENT ------------- -->
-      <div class="header__product-container">
-        <a
-          class="header__product-link"
-          href="/iphone-16-pro/"
-          target="_self"
-          tabindex="-1"
-          >&nbsp;</a
-        >
-      </div>
+      <!-- TODO: Add product slider component -->
     </header>
-    <main></main>
+    <main>
+      <!-- PRODUCTS SECTION ---------- -->
+      <section class="hero-section">
+        <!-- MAC SECTION --------- -->
+        <section class="mac__section">
+          <div class="mac__content-container">
+            <div class="card__header-container">
+              <div class="product__logo-container">
+                <img
+                  src="./assets/img/white-apple-logo.png"
+                  alt="apple logo"
+                  class="product__logo"
+                />
+              </div>
+              <h2 class="product__heading">Macbook Pro</h2>
+            </div>
+            <p class="product__price">From: $1599</p>
+            <div class="button-container">
+              <button class="product__buy-button">Buy</button>
+              <a href="./pages/products.html" class="product__link"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="mac__image-container">
+            <img
+              src="./assets/img/macbook_pro_m4_5.jpg"
+              alt="macbook pro"
+              class="product__image"
+            />
+          </div>
+        </section>
+
+        <!-- IPAD SECTION --------- -->
+        <section class="ipad__section">
+          <div class="ipad__container ipad-pro">
+            <div class="card__header-container">
+              <div class="product__logo-container">
+                <img
+                  src="./assets/img/white-apple-logo.png"
+                  alt="apple logo"
+                  class="product__logo"
+                />
+              </div>
+              <h2 class="product__heading">iPad Pro</h2>
+            </div>
+            <div class="ipad__image-container">
+              <img
+                src="./assets/img/ipad-pro-header.png"
+                alt="ipad pro"
+                class="product__image"
+              />
+            </div>
+            <div class="button-container">
+              <button class="product__buy-button">Buy</button>
+              <a href="./pages/products.html" class="product__link"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <div class="ipad__container ipad-air">
+            <div class="card__header-container">
+              <div class="product__logo-container">
+                <img
+                  src="./assets/img/black-apple-logo-removebg-preview.png"
+                  alt="apple logo"
+                  class="product__logo"
+                />
+              </div>
+              <h2 class="product__heading">iPad Air</h2>
+            </div>
+            <div class="ipad__image-container">
+              <img
+                src="./assets/img/ipad-air-removebg-preview.png"
+                alt="ipad pro"
+                class="product__image"
+              />
+            </div>
+            <div class="button-container">
+              <button class="product__buy-button">Buy</button>
+              <a href="./pages/products.html" class="product__link"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- IPHONE SECTION -->
+        <section class="iphone__section">
+          <div class="iphone__image-container">
+            <div class="iphone__button-container">
+              <button class="product__buy-button iphone__buy-button">
+                Buy
+              </button>
+              <a
+                href="./pages/products.html"
+                class="product__link iphone__product-link"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ACCESSORIES SECTION ------- -->
+        <section class="accessories__section">
+          <div class="airpods__container">
+            <div class="card__header-container">
+              <div class="product__logo-container">
+                <img
+                  src="./assets/img/black-apple-logo-removebg-preview.png"
+                  alt="apple logo"
+                  class="product__logo"
+                />
+              </div>
+              <h2 class="product__heading">Airpods Max</h2>
+            </div>
+            <div class="airpods__image-container">
+              <img
+                src="./assets/img/airpods-max-header-removebg-preview.png"
+                alt="airpods max"
+                class="product__image"
+              />
+            </div>
+            <div class="button-container">
+              <button class="product__buy-button">Buy</button>
+              <a href="./pages/products.html" class="product__link"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <div class="watch__container">
+            <div class="card__header-container">
+              <div class="product__logo-container">
+                <img
+                  src="./assets/img/white-apple-logo.png"
+                  alt="apple logo"
+                  class="product__logo"
+                />
+              </div>
+              <h2 class="product__heading">Watch</h2>
+            </div>
+            <p>Ultra 2</p>
+            <div class="watch__image-container">
+              <img
+                src="./assets/img/watch-ultra-header-2-removebg-preview.png"
+                alt="apple watch"
+                class="product__image"
+              />
+            </div>
+            <div class="button-container">
+              <button class="product__buy-button">Buy</button>
+              <a href="./pages/products.html" class="product__link"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- FOOTER ----------- -->
+    <footer>
+      <section class="footer__list-container">
+        <ul class="footer-list">
+          <h4>Entertainment</h4>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://www.apple.com/apple-one/"
+              >Apple One</a
+            >
+          </li>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://www.apple.com/apple-tv-plus/"
+              >Apple TV+</a
+            >
+          </li>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://www.apple.com/apple-music/"
+              >Apple Music</a
+            >
+          </li>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://www.apple.com/app-store/"
+              >App Store</a
+            >
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <h4>About Apple</h4>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://www.apple.com/newsroom/"
+              >Newsroom</a
+            >
+          </li>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://www.apple.com/leadership/"
+              >Apple Leadership</a
+            >
+          </li>
+          <li class="footer__list--content">
+            <a
+              class="footer-link"
+              href="https://investor.apple.com/investor-relations/default.aspx"
+              >Investors</a
+            >
+          </li>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://www.apple.com/contact/"
+              >Contact Apple</a
+            >
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <h4>Account</h4>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://account.apple.com/"
+              >Manage Your Apple Account</a
+            >
+          </li>
+          <li class="footer__list--content">
+            <a
+              class="footer-link"
+              href="https://secure6.store.apple.com/shop/signIn/account?ssi=1AAABkk7MZuUgi48qIw5M1O1N_Iirhu5B2L-sTJ8evgNKXxCWsz_zI28AAAAzaHR0cHM6Ly9zZWN1cmU2LnN0b3JlLmFwcGxlLmNvbS9zaG9wL2FjY291bnQvaG9tZXx8AAIBQdD-cHPEdPH0mTfPcZe9y8LONBdpo7rURAnhs8MXsjw"
+              >Apple Store Account</a
+            >
+          </li>
+          <li class="footer__list--content">
+            <a class="footer-link" href="https://www.icloud.com/">iCloud.com</a>
+          </li>
+        </ul>
+      </section>
+      <div class="separation-line"></div>
+      <section class="footer__container">
+        <p>Copyright © 2024. All rights reserved</p>
+        <p>
+          <a class="footer-link" href="#">Privacy Policy</a> |
+          <a class="footer-link" href="#">Terms of Use</a> |
+          <a class="footer-link" href="#">Sales and Refunds </a> |
+          <a class="footer-link" href="#">Legal Site</a> |
+          <a class="footer-link" href="#">Map</a>
+        </p>
+      </section>
+    </footer>
 
     <script src="./js/navbar.js"></script>
+    <script src="./js/shopping_cart.js"></script>
+    <script src="./js/products.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
