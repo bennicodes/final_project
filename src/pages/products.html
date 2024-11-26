@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/shopping_cart.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/products.css" />
-    <title>Document</title>
+    <title>Products</title>
   </head>
   <body>
     <header>
@@ -47,7 +47,6 @@
           </ul>
         </div>
 
-        <!-- TODO: Add shopping cart functionality -->
         <!-- Shopping Cart -->
         <button class="cart__button">
           <i class="fa-solid fa-cart-shopping fa-lg cart__icon"></i>
@@ -55,11 +54,11 @@
         </button>
 
         <!-- Inside shopping cart ------ -->
-        <div class="cart__container cart__container--active">
+        <div class="cart__container">
           <h2 class="cart__heading">Cart</h2>
 
           <!-- Cart Item --------- -->
-          <!-- TODO: add cart functionality -->
+          <!-- TODO: fix cart item structure, style inside cart add functionality -->
           <ul class="cart__item-container">
             <li class="cart__item">
               <div class="cart__item-image-container">
@@ -73,24 +72,25 @@
 
               <div class="item__price-container">
                 <div class="cart__item-quantity">
-                  <span class="item__minus">-</span>
-                  <span class="item__quantity">1</span>
-                  <span class="item__plus">+</span>
+                  <button class="item__minus">-</button>
+                  <span class="item__quantity"><p>1</p></span>
+                  <button class="item__plus">+</button>
                 </div>
                 <p class="item__price">$199.99</p>
               </div>
             </li>
           </ul>
-
-          <!-- Cart Total ------------- -->
-          <div class="total__price-container">
-            <p class="total__price">Total:</p>
-            <p class="sum__price">$1999</p>
-          </div>
-          <!-- Cart Buttons ----------- -->
-          <div class="cart__button-container">
-            <button class="cart__close-button">Close</button>
-            <button class="cart__checkout-button">Checkout</button>
+          <div class="cart__bottom-container">
+            <div class="total__price-container">
+              <!-- Cart Total ------------- -->
+              <p class="total__price">Total:</p>
+              <p class="sum__price">$1999</p>
+            </div>
+            <!-- Cart Buttons ----------- -->
+            <div class="cart__button-container">
+              <button class="cart__close-button">Close</button>
+              <button class="cart__checkout-button">Checkout</button>
+            </div>
           </div>
         </div>
 
@@ -143,9 +143,7 @@
       <!-- Macbook Section --------- -->
       <h3 class="section__heading">Mac</h3>
       <section class="product__section mac__product-section">
-        <section class="product__section-container mac">
-          <button class="product__card"></button>
-        </section>
+        <section class="product__section-container mac"></section>
 
         <section class="product__section-container mac"></section>
       </section>
@@ -248,7 +246,7 @@
 
     <!-- Scripts ------------ -->
     <script src="../js/navbar.js"></script>
-    <script src="../js/products.js"></script>
-    <script src="../js/app.js"></script>
+    <script type="module" src="../js/product-page.js"></script>
+    <script type="module" src="../js/shopping-cart.js"></script>
   </body>
 </html>

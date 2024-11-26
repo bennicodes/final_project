@@ -211,7 +211,7 @@ main {
 .product__card:hover {
   box-shadow: var(--card-hover-shadow);
   transform: scale(1.01);
-  transition: transform 0.4s ease;
+  transition: all 0.3s ease;
 }
 
 .product__card-heading {

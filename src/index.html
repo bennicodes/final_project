@@ -50,7 +50,7 @@
         </button>
 
         <!-- Inside shopping cart ------ -->
-        <div class="cart__container cart__container--active">
+        <div class="cart__container">
           <h2 class="cart__heading">Cart</h2>
 
           <!-- Cart Item --------- -->
@@ -76,16 +76,17 @@
               </div>
             </li>
           </ul>
-
-          <!-- Cart Total ------------- -->
-          <div class="total__price-container">
-            <p class="total__price">Total:</p>
-            <p class="sum__price">$1999</p>
-          </div>
-          <!-- Cart Buttons ----------- -->
-          <div class="cart__button-container">
-            <button class="cart__close-button">Close</button>
-            <button class="cart__checkout-button">Checkout</button>
+          <div class="cart__bottom-container">
+            <div class="total__price-container">
+              <!-- Cart Total ------------- -->
+              <p class="total__price">Total:</p>
+              <p class="sum__price">$1999</p>
+            </div>
+            <!-- Cart Buttons ----------- -->
+            <div class="cart__button-container">
+              <button class="cart__close-button">Close</button>
+              <button class="cart__checkout-button">Checkout</button>
+            </div>
           </div>
         </div>
 
@@ -100,6 +101,7 @@
       <!-- HEADER CONTENT ------------- -->
       <!-- TODO: Add product slider component -->
     </header>
+
     <main>
       <!-- PRODUCTS SECTION ---------- -->
       <section class="hero-section">
@@ -353,8 +355,7 @@
     </footer>
 
     <script src="./js/navbar.js"></script>
-    <script src="./js/shopping_cart.js"></script>
-    <script src="./js/products.js"></script>
+    <script src="./js/shopping-cart.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>
