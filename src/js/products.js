@@ -40,7 +40,6 @@ const iphoneProducts = [
     buyButton: "Buy",
   },
 ];
-
 const macProducts = [
   {
     name: "MacBook Pro ",
@@ -83,7 +82,6 @@ const macProducts = [
     buyButton: "Buy",
   },
 ];
-
 const ipadProducts = [
   {
     name: "iPad Pro ",
@@ -125,7 +123,6 @@ const ipadProducts = [
     buyButton: "Buy",
   },
 ];
-
 const airpodsProducts = [
   {
     name: "AirPods 4 ",

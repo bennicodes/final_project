@@ -10,37 +10,181 @@
 }
 
 /* Shopping Cart ------------ */
-.shopping__cart-container {
+.cart__button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   position: relative;
 }
 
-.shopping__cart-icon {
-  color: var(--navbar-text-color);
-}
-
-.shopping__cart-container:hover {
+.cart__button:hover {
   transform: scale(1.2);
   transition: all 0.2s ease;
 }
 
-.shopping__cart-counter {
-  position: absolute;
-  top: -10px;
-  right: -5px;
-  background-color: var(--primary-navbar-color);
+.cart__icon {
   color: var(--navbar-text-color);
 }
 
-.shopping__cart-item-container {
-  background-color: var(--primary-navbar-color);
-  width: 25%;
-  height: 50%;
+.cart__counter {
   position: absolute;
-  top: 0;
+  top: -16px;
+  right: -10px;
+  color: var(--navbar-text-color);
+  padding: 3px;
+  border-radius: 50%;
+}
+
+/* Inside Cart */
+.cart__container {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  width: 25%;
+  min-height: 500px;
+  height: 75%;
+  position: absolute;
+  top: -100px;
+  transition: transform 0.5s ease;
   right: 0;
-  z-index: 1;
+  padding: var(--spacing-medium) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-medium);
+  border-left: 1px solid #c6c6c9;
+  border-bottom: 1px solid #d8d8dc;
+
+  border-radius: 0 0 0 var(--product-card-border-radius);
   font-family: Lato-Regular, sans-serif;
+}
+
+.cart__container--active {
+  transform: translateY(165px);
+}
+
+.cart__heading {
+  width: 100%;
+  padding-left: var(--spacing-large);
+}
+
+/* Cart List ----------- */
+.cart__item-container {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-medium);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  scroll-padding: var(--spacing-large);
+}
+
+.cart__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-medium);
+  text-align: center;
+}
+.cart__item div {
+  flex-basis: 33%;
+  width: 100%;
+}
+.cart__item-image-container {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart__item-image {
+  width: 100%;
+  height: auto;
+}
+
+.item__price-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+}
+
+.cart__item-quantity {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+}
+.cart__item-quantity span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* Cart Price ------------ */
+.total__price-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-medium);
+  padding: var(--spacing-small) var(--spacing-large);
+}
+
+/* Cart Buttons ---------- */
+.cart__button-container {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 0 var(--spacing-large);
+}
+.cart__close-button {
+  background-color: var(--primary-navbar-color);
+  color: var(--navbar-text-color);
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--product-card-border-radius);
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.cart__close-button:hover {
+  background-color: #fff;
+  color: var(--primary-navbar-color);
+  transition: 0.2s ease;
+}
+
+.cart__close-button:active {
+  transform: scale(0.9);
+  transition: scale() 0.2s;
+}
+
+.cart__checkout-button {
+  background-color: var(--button-color);
+  color: var(--navbar-text-color);
+  padding: var(--spacing-small);
+  border-radius: var(--product-card-border-radius);
+  border: 2px solid var(--button-color);
+  cursor: pointer;
+}
+
+.cart__checkout-button:hover {
+  background-color: #fff;
+  color: var(--button-color);
+  transition: 0.2s ease;
+}
+
+.cart__checkout-button:active {
+  transform: scale(0.9);
+  transition: scale() 0.2s;
 }

@@ -48,11 +48,51 @@
         </div>
 
         <!-- TODO: Add shopping cart functionality -->
-        <!-- SHOPPING CART ----------- -->
-        <button class="shopping__cart-container">
-          <i class="fa-solid fa-cart-shopping fa-lg shopping__cart-icon"></i>
-          <p class="shopping__cart-counter">0</p>
+        <!-- Shopping Cart -->
+        <button class="cart__button">
+          <i class="fa-solid fa-cart-shopping fa-lg cart__icon"></i>
+          <span class="cart__counter">0</span>
         </button>
+
+        <!-- Inside shopping cart ------ -->
+        <div class="cart__container cart__container--active">
+          <h2 class="cart__heading">Cart</h2>
+
+          <!-- Cart Item --------- -->
+          <!-- TODO: add cart functionality -->
+          <ul class="cart__item-container">
+            <li class="cart__item">
+              <div class="cart__item-image-container">
+                <img
+                  src="../assets/img/iphone-16-reg-removebg-preview.png"
+                  alt=""
+                  class="cart__item-image"
+                />
+              </div>
+              <p class="cart__item-name">Name</p>
+
+              <div class="item__price-container">
+                <div class="cart__item-quantity">
+                  <span class="item__minus">-</span>
+                  <span class="item__quantity">1</span>
+                  <span class="item__plus">+</span>
+                </div>
+                <p class="item__price">$199.99</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Cart Total ------------- -->
+          <div class="total__price-container">
+            <p class="total__price">Total:</p>
+            <p class="sum__price">$1999</p>
+          </div>
+          <!-- Cart Buttons ----------- -->
+          <div class="cart__button-container">
+            <button class="cart__close-button">Close</button>
+            <button class="cart__checkout-button">Checkout</button>
+          </div>
+        </div>
 
         <!-- TOGGLE BUTTON ----------- -->
         <div class="navbar__toggle-button-container">
@@ -64,11 +104,13 @@
     </header>
 
     <main>
+      <!-- TODO: Add filter component -->
+
       <div class="heading-container">
         <h2 class="main-heading">Apple Products</h2>
       </div>
+
       <!-- Popup ------------ -->
-      <!-- TODO: Create background overlay -->
       <div class="popup__container">
         <div class="popup__window">
           <div class="popup__image-container">
