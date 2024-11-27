@@ -45,7 +45,6 @@ main {
   font-weight: 700;
 }
 
-/* TODO: Add filter styling */
 /* Product Filter ----------- */
 .filter__section {
   width: 100%;
@@ -412,10 +411,20 @@ main {
   }
 }
 
-@media screen and (max-width: 468px) {
-  main {
-    /* margin-top: 20%; */
+@media screen and (max-width: 520px) {
+  main{
+    padding: var(--spacing-medium) 0;
   }
+  .product__filter-options{
+    gap: var(--spacing-small);
+  }
+  .filter__button {
+    font-size: var(--font-size-small);
+    padding: var(--spacing-small);
+  }
+}
+
+@media screen and (max-width: 468px) {
   .popup__window {
     width: 100%;
     max-height: 400px;
