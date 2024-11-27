@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/shopping_cart.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/products.css" />
     <title>Products</title>
@@ -58,28 +58,7 @@
           <h2 class="cart__heading">Cart</h2>
 
           <!-- Cart Item --------- -->
-          <!-- TODO: fix cart item structure, style inside cart add functionality -->
-          <ul class="cart__item-container">
-            <li class="cart__item">
-              <div class="cart__item-image-container">
-                <img
-                  src="../assets/img/iphone-16-reg-removebg-preview.png"
-                  alt=""
-                  class="cart__item-image"
-                />
-              </div>
-              <p class="cart__item-name">Name</p>
-
-              <div class="item__price-container">
-                <div class="cart__item-quantity">
-                  <button class="item__minus">-</button>
-                  <span class="item__quantity"><p>1</p></span>
-                  <button class="item__plus">+</button>
-                </div>
-                <p class="item__price">$199.99</p>
-              </div>
-            </li>
-          </ul>
+          <ul class="cart__item-container"></ul>
           <div class="cart__bottom-container">
             <div class="total__price-container">
               <!-- Cart Total ------------- -->
@@ -105,6 +84,7 @@
 
     <main>
       <!-- TODO: Add filter component -->
+      <div></div>
 
       <div class="heading-container">
         <h2 class="main-heading">Apple Products</h2>
@@ -142,11 +122,7 @@
 
       <!-- Macbook Section --------- -->
       <h3 class="section__heading">Mac</h3>
-      <section class="product__section mac__product-section">
-        <section class="product__section-container mac"></section>
-
-        <section class="product__section-container mac"></section>
-      </section>
+      <section class="product__section mac__product-section"></section>
 
       <!-- iPad Section -------- -->
       <h3 class="section__heading">iPad</h3>
@@ -247,6 +223,7 @@
     <!-- Scripts ------------ -->
     <script src="../js/navbar.js"></script>
     <script type="module" src="../js/product-page.js"></script>
-    <script type="module" src="../js/shopping-cart.js"></script>
+    <script type="module" src="../js/products.js"></script>
+    <script type="module" src="../js/cart.js"></script>
   </body>
 </html>

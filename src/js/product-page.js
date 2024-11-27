@@ -1,4 +1,4 @@
-// Import Products from products.js -------
+// Imported Products from products.js -------
 import {
   airpodsProducts,
   appleWatchProducts,
@@ -6,6 +6,10 @@ import {
   iphoneProducts,
   macProducts,
 } from "./products.js";
+
+// Import from cart.js -------
+import { addToCart } from "./cart.js";
+
 // Product categories
 const productCategories = ["iphone", "mac", "ipad", "airpods", "watch"];
 const productData = {
@@ -48,9 +52,14 @@ function openPopup(product) {
     specItem.textContent = spec;
     specItem.classList.add("popup__product-list-specs");
 
-    // Append each spec as a list item
+    // Append each spec as list item
     popupSpecs.appendChild(specItem);
   });
+
+  // Add product to cart from popup window
+  popupBuyButton.onclick = () => {
+    addToCart(product.id);
+  };
 
   // Show the popup
   popupContainer.classList.add(
@@ -82,7 +91,7 @@ if (closePopupButton) {
   closePopupButton.addEventListener("click", closePopup);
 }
 
-// Close the popup wehn user clicks outside of popup
+// Close the popup when user clicks outside of popup
 popupContainer.addEventListener("click", (e) => {
   if (e.target === popupContainer) {
     closePopup();
@@ -143,6 +152,14 @@ productCategories.forEach((category) => {
     buyButton.textContent = "Buy";
     buyButton.classList.add("product__buy-button");
     bottomCardContainer.appendChild(buyButton);
+
+    // Add product to the cart
+    // Prevent the popup function when clicking button
+    buyButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      addToCart(product.id); // Add the product to the cart by its ID
+    });
 
     // Event listener to open the popup
     productCard.addEventListener("click", () => {

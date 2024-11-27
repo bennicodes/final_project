@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/navbar.css" />
-    <link rel="stylesheet" href="./css/shopping_cart.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Final Project</title>
@@ -54,34 +54,14 @@
           <h2 class="cart__heading">Cart</h2>
 
           <!-- Cart Item --------- -->
-          <!-- TODO: fix cart item structure, style inside cart add functionality -->
-          <ul class="cart__item-container">
-            <li class="cart__item">
-              <div class="cart__item-image-container">
-                <img
-                  src="./assets/img/iphone-16-reg-removebg-preview.png"
-                  alt=""
-                  class="cart__item-image"
-                />
-              </div>
-              <p class="cart__item-name">Name</p>
-
-              <div class="item__price-container">
-                <div class="cart__item-quantity">
-                  <span class="item__minus">-</span>
-                  <span class="item__quantity">1</span>
-                  <span class="item__plus">+</span>
-                </div>
-                <p class="item__price">$199.99</p>
-              </div>
-            </li>
-          </ul>
+          <ul class="cart__item-container">Cart is empty</ul>
           <div class="cart__bottom-container">
             <div class="total__price-container">
               <!-- Cart Total ------------- -->
               <p class="total__price">Total:</p>
               <p class="sum__price">$1999</p>
             </div>
+
             <!-- Cart Buttons ----------- -->
             <div class="cart__button-container">
               <button class="cart__close-button">Close</button>
@@ -355,7 +335,8 @@
     </footer>
 
     <script src="./js/navbar.js"></script>
-    <script src="./js/shopping-cart.js"></script>
+    <script type="module" src="./js/products.js"></script>
+    <script type="module" src="./js/cart.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>

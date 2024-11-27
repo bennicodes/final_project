@@ -266,6 +266,10 @@ main {
   color: var(--button-color);
   transition: 0.3s ease;
 }
+.product__buy-button:active {
+  transform: scale(0.8);
+  transition: scale() 0.2s;
+}
 
 .product__learn-more-button {
   position: absolute;
