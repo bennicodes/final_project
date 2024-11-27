@@ -53,7 +53,7 @@ function openPopup(product) {
     specItem.classList.add("popup__product-list-specs");
 
     // Append each spec as list item
-    popupSpecs.appendChild(specItem);
+    popupSpecs.append(specItem);
   });
 
   // Add product to cart from popup window
@@ -98,67 +98,71 @@ popupContainer.addEventListener("click", (e) => {
   }
 });
 
-// Sort products to the right category -------
-productCategories.forEach((category) => {
-  const section = document.querySelector(`.${category}__product-section`);
-  //   Clear existing content
+// Insert products to correct section
+function insertProducts(category, products) {
+  const section = document.querySelector(
+    `.${category.toLowerCase()}__product-section`
+  );
+
   section.innerHTML = "";
 
-  // Get the product list for the current category
-  const products = productData[category];
-
-  // Loop through the products and create cards
+  // Create Product Cards
   products.forEach((product) => {
+    // Section container -------------
+    const sectionContainer = document.createElement("div");
+    sectionContainer.classList.add("section__container");
+    section.append(sectionContainer);
+
     // Product container
     const productContainer = document.createElement("div");
     productContainer.classList.add("product__section-container");
-    section.appendChild(productContainer);
+    sectionContainer.append(productContainer);
 
     // Product card
     const productCard = document.createElement("button");
     productCard.classList.add("product__card");
-    productContainer.appendChild(productCard);
+    productContainer.append(productCard);
 
     // Product name
     const productName = document.createElement("h3");
     productName.textContent = product.name;
     productName.classList.add("product__card-heading");
-    productCard.appendChild(productName);
+    productCard.append(productName);
 
     // Product image
     const productImageContainer = document.createElement("div");
     productImageContainer.classList.add("product__card-image-container");
-    productCard.appendChild(productImageContainer);
+    productCard.append(productImageContainer);
 
     const productImage = document.createElement("img");
     productImage.src = product.image;
     productImage.alt = product.alt;
     productImage.classList.add("product__card-image");
-    productImageContainer.appendChild(productImage);
+    productImageContainer.append(productImage);
 
     // Bottom card container -------------
     const bottomCardContainer = document.createElement("div");
     bottomCardContainer.classList.add("bottom__card-container");
-    productCard.appendChild(bottomCardContainer);
+    productCard.append(bottomCardContainer);
 
     // Product price
     const productPrice = document.createElement("p");
     productPrice.textContent = `$${product.price}`;
-    bottomCardContainer.appendChild(productPrice);
+    bottomCardContainer.append(productPrice);
 
     // Buy button
     const buyButton = document.createElement("button");
     buyButton.href = product.buyButton;
     buyButton.textContent = "Buy";
     buyButton.classList.add("product__buy-button");
-    bottomCardContainer.appendChild(buyButton);
+    bottomCardContainer.append(buyButton);
 
-    // Add product to the cart
-    // Prevent the popup function when clicking button
+    // Add product to the cart ------------
     buyButton.addEventListener("click", (e) => {
+      // Prevent the popup function when clicking button
       e.stopPropagation();
 
-      addToCart(product.id); // Add the product to the cart by its ID
+      addToCart(product.id);
     });
 
     // Event listener to open the popup
@@ -166,4 +170,24 @@ productCategories.forEach((category) => {
       openPopup(product);
     });
   });
-});
+}
+
+// Insert products into respective sections dynamically
+insertProducts("iPhone", iphoneProducts);
+insertProducts("Mac", macProducts);
+insertProducts("iPad", ipadProducts);
+insertProducts("Airpods", airpodsProducts);
+insertProducts("Watch", appleWatchProducts);
+
+// Filter ------------------------------
+
+// Cloned array of products
+const allProducts = [
+  ...iphoneProducts,
+  ...macProducts,
+  ...ipadProducts,
+  ...airpodsProducts,
+  ...appleWatchProducts,
+];
+
+// TODO: Create filter function

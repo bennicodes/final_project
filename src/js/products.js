@@ -2,6 +2,7 @@
 export const iphoneProducts = [
   {
     name: "iPhone 16 Pro",
+    category: "iPhone",
     id: "iphone-16-pro",
     price: 999.0,
     image: "/src/assets/img/iphone_16_pro_max-removebg-preview.png",
@@ -16,6 +17,7 @@ export const iphoneProducts = [
   },
   {
     name: "iPhone 16",
+    category: "iPhone",
     id: "iphone-16",
     price: 799.0,
     image: "/src/assets/img/iphone-16-reg-removebg-preview.png",
@@ -30,6 +32,7 @@ export const iphoneProducts = [
   },
   {
     name: "iPhone SE",
+    category: "iPhone",
     id: "iphone-se",
     price: 429.0,
     image: "/src/assets/img/iphone-SE-removebg-preview.png",
@@ -46,6 +49,7 @@ export const iphoneProducts = [
 export const macProducts = [
   {
     name: "MacBook Pro ",
+    category: "Mac",
     id: "macbook-pro",
     price: 1599.0,
     image: "/src/assets/img/macbook-pro-removebg-preview.png",
@@ -60,6 +64,7 @@ export const macProducts = [
   },
   {
     name: "MacBook Air",
+    category: "Mac",
     id: "macbook-air",
     price: 999.0,
     image: "/src/assets/img/Macbook-removebg-preview.png",
@@ -75,6 +80,7 @@ export const macProducts = [
   },
   {
     name: "iMac",
+    category: "Mac",
     id: "imac",
     price: 1299.0,
     image: "/src/assets/img/imac-removebg-preview.png",
@@ -91,6 +97,7 @@ export const macProducts = [
 export const ipadProducts = [
   {
     name: "iPad Pro ",
+    category: "iPad",
     id: "ipad-pro",
     price: 1099.0,
     image: "/src/assets/img/ipad-pro-removebg-preview.png",
@@ -105,6 +112,7 @@ export const ipadProducts = [
   },
   {
     name: "iPad Air",
+    category: "iPad",
     id: "ipad-air",
     price: 599.0,
     image: "/src/assets/img/ipad-air-removebg-preview.png",
@@ -119,6 +127,7 @@ export const ipadProducts = [
   },
   {
     name: "iPad",
+    category: "iPad",
     id: "ipad",
     price: 349.0,
     image: "/src/assets/img/ipad-removebg-preview.png",
@@ -135,6 +144,7 @@ export const ipadProducts = [
 export const airpodsProducts = [
   {
     name: "AirPods 4 ",
+    category: "Airpods",
     id: "aiprods-4",
     price: 129.0,
     image: "/src/assets/img/airpods-4-removebg-preview.png",
@@ -150,6 +160,7 @@ export const airpodsProducts = [
   },
   {
     name: "AirPods Pro 2 ",
+    category: "Airpods",
     id: "airpods-pro-2",
     price: 249.0,
     image: "/src/assets/img/airpods-pro-2-removebg-preview.png",
@@ -165,6 +176,7 @@ export const airpodsProducts = [
   },
   {
     name: "AirPods  Max ",
+    category: "Airpods",
     id: "airpods-max",
     price: 549,
     image: "/src/assets/img/airpods-max-removebg-preview.png",
@@ -181,6 +193,7 @@ export const airpodsProducts = [
 export const appleWatchProducts = [
   {
     name: "Apple Watch Series 10",
+    category: "Apple Watch",
     id: "apple-watch-series-10",
     price: 399.0,
     image: "/src/assets/img/apple-watch-series-10-removebg-preview.png",
@@ -196,6 +209,7 @@ export const appleWatchProducts = [
   },
   {
     name: "Apple Watch Ultra 2",
+    category: "Apple Watch",
     id: "apple-watch-ultra-2",
     price: 799.0,
     image: "/src/assets/img/apple-watch-ultra-2-removebg-preview.png",
@@ -211,6 +225,7 @@ export const appleWatchProducts = [
   },
   {
     name: "Apple Watch SE",
+    category: "Apple Watch",
     id: "apple-watch-se",
     price: 249,
     image: "/src/assets/img/apple-watch-se-removebg-preview.png",
@@ -224,5 +239,3 @@ export const appleWatchProducts = [
     buyButton: "Buy",
   },
 ];
-
-const buyButton = document.querySelector;

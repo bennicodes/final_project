@@ -23,6 +23,10 @@ closeCartButton.addEventListener("click", () => {
 
 // TODO: Animation when item is added to cart, and add clear cart function
 
+// TODO: Add cart storage function
+
+// TODO: Add clear cart function
+
 // Cart -------------
 const cart = [];
 

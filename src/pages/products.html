@@ -85,14 +85,29 @@
 
     <main>
       <!-- TODO: Add filter component -->
-      <div class="filter-container">
-        <h3 class="filter-heading"></h3>
-        <div class="filter-options">
-          <!-- Filter options here -->
+      <section class="filter__section">
+        <div class="filter__container">
+          <ul class="product__filter-options">
+            <li class="filter__option">
+              <button class="filter__button filter__button--active">
+                iPhone
+              </button>
+            </li>
+            <li class="filter__option">
+              <button class="filter__button">Mac</button>
+            </li>
+            <li class="filter__option">
+              <button class="filter__button">iPad</button>
+            </li>
+            <li class="filter__option">
+              <button class="filter__button">Airpods</button>
+            </li>
+            <li class="filter__option">
+              <button class="filter__button">Apple Watch</button>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <!-- TODO: Add sorting component -->
+      </section>
 
       <div class="heading-container">
         <h2 class="main-heading">Apple Products</h2>
@@ -125,24 +140,33 @@
 
       <!-- Products ------------ -->
       <!-- iPhone Section --------- -->
-      <h3 class="section__heading">iPhone</h3>
-      <section class="product__section iphone__product-section"></section>
+      <div class="filter--active">
+        <h3 class="section__heading">iPhone</h3>
+        <div class="product__section iphone__product-section"></div>
+      </div>
 
       <!-- Macbook Section --------- -->
-      <h3 class="section__heading">Mac</h3>
-      <section class="product__section mac__product-section"></section>
+      <div class="filter--active">
+        <h3 class="section__heading">Mac</h3>
+        <div class="product__section mac__product-section"></div>
+      </div>
 
       <!-- iPad Section -------- -->
-      <h3 class="section__heading">iPad</h3>
-      <section class="product__section ipad__product-section"></section>
+      <div class="filter--active">
+        <h3 class="section__heading">iPad</h3>
+        <div class="product__section ipad__product-section"></div>
+      </div>
 
       <!-- Airpods Section -->
-      <h3 class="section__heading">Airpods</h3>
-      <section class="product__section airpods__product-section"></section>
-
+      <div class="filter--active">
+        <h3 class="section__heading">Airpods</h3>
+        <div class="product__section airpods__product-section"></div>
+      </div>
       <!-- Apple Watch Section -->
-      <h3 class="section__heading">Apple Watch</h3>
-      <section class="product__section watch__product-section"></section>
+      <div class="filter--active">
+        <h3 class="section__heading">Apple Watch</h3>
+        <div class="product__section watch__product-section"></div>
+      </div>
     </main>
 
     <!-- FOOTER ----------- -->
