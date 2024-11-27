@@ -54,7 +54,9 @@
           <h2 class="cart__heading">Cart</h2>
 
           <!-- Cart Item --------- -->
-          <ul class="cart__item-container">Cart is empty</ul>
+          <ul class="cart__item-container">
+            Cart is empty
+          </ul>
           <div class="cart__bottom-container">
             <div class="total__price-container">
               <!-- Cart Total ------------- -->
@@ -81,7 +83,6 @@
       <!-- HEADER CONTENT ------------- -->
       <!-- TODO: Add product slider component -->
     </header>
-
     <main>
       <!-- PRODUCTS SECTION ---------- -->
       <section class="hero-section">
@@ -100,7 +101,7 @@
             </div>
             <p class="product__price">From: $1599</p>
             <div class="button-container">
-              <button class="product__buy-button">Buy</button>
+              <button class="product__buy-button" id="macbook-pro">Buy</button>
               <a href="./pages/products.html" class="product__link"
                 >Learn More</a
               >
@@ -136,7 +137,7 @@
               />
             </div>
             <div class="button-container">
-              <button class="product__buy-button">Buy</button>
+              <button class="product__buy-button" id="ipad-pro">Buy</button>
               <a href="./pages/products.html" class="product__link"
                 >Learn More</a
               >
@@ -162,8 +163,11 @@
               />
             </div>
             <div class="button-container">
-              <button class="product__buy-button">Buy</button>
-              <a href="./pages/products.html" class="product__link"
+              <button class="product__buy-button" id="ipad-air">Buy</button>
+              <a
+                href="./pages/products.html"
+                class="product__link"
+                id="ipad-air"
                 >Learn More</a
               >
             </div>
@@ -181,7 +185,10 @@
               />
             </div>
             <div class="iphone__button-container">
-              <button class="product__buy-button iphone__buy-button">
+              <button
+                class="product__buy-button iphone__buy-button"
+                id="iphone-16"
+              >
                 Buy
               </button>
               <a
@@ -214,7 +221,7 @@
               />
             </div>
             <div class="button-container">
-              <button class="product__buy-button">Buy</button>
+              <button class="product__buy-button" id="airpods-max">Buy</button>
               <a href="./pages/products.html" class="product__link"
                 >Learn More</a
               >
@@ -241,7 +248,9 @@
               />
             </div>
             <div class="button-container">
-              <button class="product__buy-button">Buy</button>
+              <button class="product__buy-button" id="apple-watch-ultra-2">
+                Buy
+              </button>
               <a href="./pages/products.html" class="product__link"
                 >Learn More</a
               >
@@ -334,9 +343,9 @@
       </section>
     </footer>
 
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/cart.js"></script>
     <script src="./js/navbar.js"></script>
     <script type="module" src="./js/products.js"></script>
-    <script type="module" src="./js/cart.js"></script>
-    <script src="./js/app.js"></script>
   </body>
 </html>

@@ -21,9 +21,8 @@ closeCartButton.addEventListener("click", () => {
   cartContainer.classList.remove("cart__container--active");
 });
 
-// TODO: Animation when item is added to cart
+// TODO: Animation when item is added to cart, and add clear cart function
 
-// TODO: Add functionality to popup buy button
 // Cart -------------
 const cart = [];
 
@@ -47,6 +46,7 @@ function addToCart(productId) {
 
   if (product) {
     // Check if the product already exists
+
     const existingProduct = cart.find((item) => item.id === productId);
 
     // Increase quantity
