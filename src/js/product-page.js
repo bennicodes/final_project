@@ -172,7 +172,7 @@ function insertProducts(category, products) {
   });
 }
 
-// Insert products into respective sections dynamically
+// Insert products into right sections
 insertProducts("iPhone", iphoneProducts);
 insertProducts("Mac", macProducts);
 insertProducts("iPad", ipadProducts);
@@ -180,14 +180,35 @@ insertProducts("Airpods", airpodsProducts);
 insertProducts("Watch", appleWatchProducts);
 
 // Filter ------------------------------
+const filterButtons = document.querySelectorAll(".filter__button");
+const productSections = document.querySelectorAll(
+  ".filtered__content-container"
+);
 
-// Cloned array of products
-const allProducts = [
-  ...iphoneProducts,
-  ...macProducts,
-  ...ipadProducts,
-  ...airpodsProducts,
-  ...appleWatchProducts,
-];
+// TODO: make the unselected filters remove their content
+filterButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    // Toggle the active class on the clicked button
+    const buttonClicked = e.target;
+    const sectionId = buttonClicked.id.toLowerCase();
+    const activeSection = document.querySelector(
+      `.${sectionId}__product-section`
+    ).parentElement;
 
-// TODO: Create filter function
+    // Toggle the active class on the button
+    buttonClicked.classList.toggle("filter__button--active");
+
+    // Only show or hide the section if the button is active
+    if (buttonClicked.classList.contains("filter__button--active")) {
+      // Show the section
+      activeSection.classList.add("filter--active");
+    } else if (!buttonClicked.classList.contains("filter--active")) {
+      activeSection.classList.remove("filter--active");
+      activeSection.classList.add("filter--disabled");
+    }
+    {
+      // Hide the section
+      activeSection.classList.add("filter--disabled");
+    }
+  });
+});

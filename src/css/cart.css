@@ -231,3 +231,11 @@
   transform: scale(0.9);
   transition: scale() 0.2s;
 }
+
+/* TODO: make cart responsive */
+/* Media Queries */
+@media screen and(max-width:1200px) {
+  .cart__container {
+    width: auto;
+  }
+}

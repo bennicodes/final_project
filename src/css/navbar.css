@@ -57,8 +57,9 @@ header {
   font-size: var(--font-size-base);
 }
 
-.navbar__link a:hover {
+.navbar__link:hover {
   color: var(--navbar-hover-color);
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
@@ -67,6 +68,7 @@ header {
 }
 .navbar__link--active:hover {
   border-bottom: 1px solid var(--navbar-hover-color);
+  transition: all 0.2s ease;
 }
 
 /* STYLES FOR TOGGLE BUTTON ----------- */
