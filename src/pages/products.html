@@ -56,7 +56,12 @@
 
         <!-- Inside shopping cart ------ -->
         <div class="cart__container">
-          <h2 class="cart__heading">Cart</h2>
+          <div class="cart__top-container">
+            <h2 class="cart__heading">Cart</h2>
+            <button class="clear__cart-button">
+              <i class="fa-solid fa-trash-can fa-xl clear__cart-icon"></i>
+            </button>
+          </div>
 
           <!-- Cart Item --------- -->
           <ul class="cart__item-container"></ul>
@@ -84,7 +89,6 @@
     </header>
 
     <main>
-      <!-- TODO: Add filter component -->
       <section class="filter__section">
         <div class="filter__container">
           <ul class="product__filter-options">

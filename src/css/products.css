@@ -359,8 +359,7 @@ main {
   .product__section {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: var(--spacing-medium) 0;
-    gap: var(--spacing-medium);
+    gap: var(--spacing-large);
   }
   .product__list--container {
     gap: var(--spacing-x-large);
@@ -387,10 +386,6 @@ main {
 
   .popup__description {
     flex-basis: 75%;
-  }
-
-  .product__section {
-    gap: var(--spacing-large);
   }
 }
 

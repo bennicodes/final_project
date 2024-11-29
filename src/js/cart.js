@@ -45,12 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to add product to cart
 function addToCart(productId) {
-  // Find the product in all product categories
+  // Find the product
   const product = allProducts.find((item) => item.id === productId);
 
+  // Check if the product already exists
   if (product) {
-    // Check if the product already exists
-
     const existingProduct = cart.find((item) => item.id === productId);
 
     // Increase quantity
@@ -65,6 +64,7 @@ function addToCart(productId) {
         quantity: 1,
       });
     }
+    saveCartToStorage();
     updateCartUI();
   }
 }
@@ -74,7 +74,6 @@ function updateCartUI() {
   const cartItemContainer = document.querySelector(".cart__item-container");
   const totalPriceElement = document.querySelector(".sum__price");
 
-  // Clear existing content
   cartItemContainer.innerHTML = "";
   let totalPrice = 0;
 
@@ -84,7 +83,6 @@ function updateCartUI() {
     emptyMessage.classList.add("cart__text");
     cartItemContainer.append(emptyMessage);
 
-    // Clear total price display
     totalPriceElement.textContent = "$0.00";
     return;
   }
@@ -174,6 +172,7 @@ function updateQuantity(index, change) {
       cart.splice(index, 1);
     }
 
+    saveCartToStorage();
     updateCartUI();
     updateCartCounter();
   }
@@ -186,6 +185,37 @@ function updateCartCounter() {
   cartCounter.textContent = totalQuantity;
 }
 
-export { addToCart };
+// Clear cart -----------
+const clearCartButton = document.querySelector(".clear__cart-button");
+function clearCart() {
+  cart.length = 0;
 
-// TODO: Add storage to cart
+  saveCartToStorage();
+  updateCartUI();
+  updateCartCounter();
+}
+
+clearCartButton.addEventListener("click", clearCart);
+
+function saveCartToStorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function getCartFromStorage() {
+  const storedCart = localStorage.getItem("cart");
+  if (storedCart) {
+    const parsedCart = JSON.parse(storedCart);
+    cart.length = 0;
+    cart.push(...parsedCart);
+    updateCartUI();
+    updateCartCounter();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  getCartFromStorage();
+});
+
+// Checkout -----------
+
+export { addToCart };
