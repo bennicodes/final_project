@@ -188,7 +188,6 @@ const productSections = document.querySelectorAll(
 // TODO: make the unselected filters remove their content
 filterButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    // Toggle the active class on the clicked button
     const buttonClicked = e.target;
     const sectionId = buttonClicked.id.toLowerCase();
     const activeSection = document.querySelector(
@@ -198,17 +197,41 @@ filterButtons.forEach((button) => {
     // Toggle the active class on the button
     buttonClicked.classList.toggle("filter__button--active");
 
-    // Only show or hide the section if the button is active
-    if (buttonClicked.classList.contains("filter__button--active")) {
-      // Show the section
-      activeSection.classList.add("filter--active");
-    } else if (!buttonClicked.classList.contains("filter--active")) {
-      activeSection.classList.remove("filter--active");
-      activeSection.classList.add("filter--disabled");
-    }
-    {
-      // Hide the section
-      activeSection.classList.add("filter--disabled");
+    // Get all sections
+    const productSections = document.querySelectorAll(
+      ".filtered__content-container"
+    );
+
+    // Update section visibility based on active buttons
+    const activeButtons = [...filterButtons].filter((btn) =>
+      btn.classList.contains("filter__button--active")
+    );
+
+    if (activeButtons.length > 0) {
+      // Hide all sections initially
+      productSections.forEach((section) => {
+        section.classList.remove("filter--active");
+        section.classList.add("filter--disabled");
+      });
+
+      // Show sections related to active buttons
+      activeButtons.forEach((activeButton) => {
+        const relatedSectionId = activeButton.id.toLowerCase();
+        const relatedSection = document.querySelector(
+          `.${relatedSectionId}__product-section`
+        ).parentElement;
+
+        if (relatedSection) {
+          relatedSection.classList.add("filter--active");
+          relatedSection.classList.remove("filter--disabled");
+        }
+      });
+    } else {
+      // If no buttons are active, reset all sections
+      productSections.forEach((section) => {
+        section.classList.remove("filter--disabled");
+        section.classList.remove("filter--active");
+      });
     }
   });
 });
