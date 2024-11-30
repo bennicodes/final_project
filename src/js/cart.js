@@ -217,5 +217,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Checkout -----------
+const checkoutButton = document.querySelector(".cart__checkout-button");
+
+checkoutButton.addEventListener("click", () => {
+  alert("Your order has been placed. Thank you for your purchase!");
+  clearCart();
+  cartContainer.classList.remove("cart__container--active");
+});
 
 export { addToCart };

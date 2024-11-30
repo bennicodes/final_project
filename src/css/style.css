@@ -105,6 +105,11 @@ main {
   transition: 0.2s ease;
 }
 
+.product__buy-button:active {
+  transform: scale(0.9);
+  transition: scale() 0.2s;
+}
+
 .product__link {
   background-color: var(--product-link-color);
   color: #fff;
@@ -117,6 +122,11 @@ main {
   background-color: var(--button-color);
   color: #fff;
   transition: 0.2s ease;
+}
+
+.product__link:active {
+  transform: scale(0.9);
+  transition: scale() 0.2s;
 }
 
 .mac__image-container {
@@ -185,8 +195,7 @@ main {
 
 .iphone__image-container {
   width: 100%;
-  height: auto;
-  padding-bottom: var(--spacing-large);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -205,8 +214,10 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-medium);
-  padding-bottom: var(--spacing-large);
+  gap: var(--spacing-large);
+  padding-top: var(--spacing-large);
+  position: absolute;
+  top: 80%;
 }
 
 /* ACCESSORIES SECTION ------- */
@@ -274,6 +285,11 @@ main {
 }
 
 /* MEDIA QUERIES */
+@media screen and (max-width: 850px) {
+  .iphone__button-container {
+    padding-top: 0;
+  }
+}
 
 @media screen and (max-width: 760px) {
   .hero-section {
@@ -298,6 +314,9 @@ main {
     flex-direction: column;
     height: auto;
   }
+  .iphone__button-container {
+    gap: var(--spacing-medium);
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -310,6 +329,7 @@ main {
   .iphone__image-container {
     padding-bottom: var(--spacing-medium);
   }
+
   .accessories__section {
     flex-direction: column;
     height: auto;
@@ -317,5 +337,16 @@ main {
   .watch__container {
     width: 100%;
     height: auto;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .iphone__button-container {
+    top: 75%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .iphone__button-container {
+    top: 60%;
   }
 }

@@ -269,8 +269,7 @@ main {
   cursor: pointer;
 }
 
-.product__card:hover,
-.filtered__product-card:hover {
+.product__card:hover {
   box-shadow: var(--card-hover-shadow);
   transform: scale(1.01);
   transition: all 0.3s ease;
@@ -326,10 +325,10 @@ main {
 .product__buy-button:hover {
   background-color: #fff;
   color: var(--button-color);
-  transition: 0.3s ease;
+  transition: 0.2s ease;
 }
 .product__buy-button:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
   transition: scale() 0.2s;
 }
 

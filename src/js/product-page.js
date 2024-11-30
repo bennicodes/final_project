@@ -185,7 +185,6 @@ const productSections = document.querySelectorAll(
   ".filtered__content-container"
 );
 
-// TODO: make the unselected filters remove their content
 filterButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     const buttonClicked = e.target;
