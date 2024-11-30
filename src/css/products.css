@@ -106,6 +106,27 @@ main {
   display: block;
 }
 
+/* To the top button ------------- */
+.to-the-top__button {
+  background-color: #c7c7c74f;
+  color: #828282;
+  width: 32px;
+  height: auto;
+  padding: var(--spacing-small);
+  border: 1px solid #828282;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  right: 25px;
+  bottom: 15%;
+  z-index: 1;
+  display: none;
+}
+
+.to-the-top__button--visible {
+  display: block;
+}
+
 /* Background overlay */
 /* Popup window ------------- */
 .popup__container-overlay--active {
@@ -431,5 +452,8 @@ main {
 
   .popup__description {
     flex-basis: 90%;
+  }
+  .to-the-top__button--visible {
+    right: 5px;
   }
 }

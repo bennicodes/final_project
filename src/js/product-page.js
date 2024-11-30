@@ -234,3 +234,18 @@ filterButtons.forEach((button) => {
     }
   });
 });
+
+// Scroll to top ---------------
+const scrollToTopButton = document.querySelector(".to-the-top__button");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollToTopButton.classList.add("to-the-top__button--visible");
+  } else {
+    scrollToTopButton.classList.remove("to-the-top__button--visible");
+  }
+});
+
+scrollToTopButton.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
