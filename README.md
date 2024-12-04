@@ -1,4 +1,4 @@
-# Apple
+# Apple web application
 
 A web application inspired by apple and eplehuset with some similar design and features and some different.
 
@@ -27,6 +27,7 @@ Navbar with hamburger menu on tablet and mobile devices
 Shopping cart and checkout alert
 Filter
 Popup window
+Scroll to top button on product page
 
 ## Sources
 
