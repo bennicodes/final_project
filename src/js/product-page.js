@@ -102,7 +102,7 @@ function insertProducts(category, products) {
     `.${category.toLowerCase()}__product-section`
   );
 
-  section.innerHTML = "";
+  // section.innerHTML = "";
 
   // Create Product Cards
   products.forEach((product) => {
@@ -120,6 +120,23 @@ function insertProducts(category, products) {
     const productCard = document.createElement("button");
     productCard.classList.add("product__card");
     productContainer.append(productCard);
+
+    const learnMoreButton = document.createElement("button");
+    learnMoreButton.textContent = "Learn More";
+    learnMoreButton.classList.add("learn__more-button");
+    productCard.append(learnMoreButton);
+    learnMoreButton.addEventListener("click", () => {
+      openPopup(product);
+    });
+
+    function displayLearnMoreButton() {
+      learnMoreButton.classList.add("learn__more-button--active");
+    }
+    function removeLearnMoreButton() {
+      learnMoreButton.classList.remove("learn__more-button--active");
+    }
+    productCard.addEventListener("mouseenter", displayLearnMoreButton);
+    productCard.addEventListener("mouseleave", removeLearnMoreButton);
 
     // Product name
     const productName = document.createElement("h3");

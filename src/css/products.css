@@ -280,8 +280,6 @@ main {
 }
 
 /* Product Card */
-.learn__more-button {
-}
 
 .product__card {
   position: relative;
@@ -342,6 +340,35 @@ main {
   font-size: var(--font-size-base);
 }
 
+.learn__more-button {
+  background-color: var(--primary-navbar-color);
+  color: var(--navbar-text-color);
+  height: 35px;
+  text-align: center;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 1.5px solid var(--primary-navbar-color);
+  border-radius: var(--product-card-border-radius);
+  cursor: pointer;
+  position: absolute;
+  transform: translateY(128px);
+  left: 100px;
+  transition: 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+}
+
+.learn__more-button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.learn__more-button--active {
+  transform: translateY(100px);
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
 .product__buy-button {
   background-color: var(--button-color);
   color: #fff;
@@ -362,28 +389,6 @@ main {
 .product__buy-button:active {
   transform: scale(0.9);
   transition: scale() 0.2s;
-}
-
-.product__learn-more-button {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  background-color: #000;
-  color: #fff;
-  width: 150px;
-  height: 35px;
-  text-align: center;
-  padding: var(--spacing-small) var(--spacing-medium);
-  border: 1.5px solid #000;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.product__learn-more-button:hover {
-  background-color: #fff;
-  color: #000;
-  transition: 0.3s ease;
 }
 
 @media screen and (max-width: 1200px) {
