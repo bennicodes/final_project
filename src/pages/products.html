@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="shortcut icon"
+      href="../assets/img/white-apple-logo.png"
+      type="image/png"
+    />
+    <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
@@ -105,9 +110,8 @@
         </div>
       </section>
 
-      <button class="to-the-top__button ">
-        <i class="fa-solid fa-angle-up">
-        </i>
+      <button class="to-the-top__button">
+        <i class="fa-solid fa-angle-up"> </i>
       </button>
 
       <div class="heading-container">
@@ -127,7 +131,10 @@
             </button>
 
             <div class="popup__description-header">
-              <h3 class="popup__heading"></h3>
+              <div class="popup__heading-container">
+                <h3 class="popup__heading"></h3>
+                <p class="popup__price"></p>
+              </div>
               <button
                 id="popup__buy-button"
                 class="product__buy-button"
@@ -143,7 +150,9 @@
       <!-- iPhone Section --------- -->
       <div class="filtered__content-container filter--active">
         <h3 class="section__heading">iPhone</h3>
-        <div class="product__section iphone__product-section"></div>
+        <div class="product__section iphone__product-section">
+          <button class="product__learn-more-button">Learn more</button>
+        </div>
       </div>
 
       <!-- Macbook Section --------- -->

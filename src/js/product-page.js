@@ -23,7 +23,11 @@ const productData = {
 const main = document.querySelector("main");
 
 const popupContainer = document.querySelector(".popup__container");
+const popupHeadingContainer = document.querySelector(
+  ".popup__heading-container"
+);
 const popupHeading = document.querySelector(".popup__heading");
+const popupPrice = document.querySelector(".popup__price");
 const popupImage = document.querySelector(".popup__product-image");
 const popupSpecs = document.querySelector(".popup__product-list");
 const popupBuyButton = document.querySelector("#popup__buy-button");
@@ -31,16 +35,12 @@ const closePopupButton = document.querySelector(".popup__close-button");
 
 // Function to open the popup
 function openPopup(product) {
-  if (!popupContainer || !popupSpecs) {
-    console.error("Popup container or specs list not found.");
-    return;
-  }
-
   //   Popup buy button
   popupBuyButton.textContent = "Buy";
 
   // Update product details in the popup
   popupHeading.textContent = product.name;
+  popupPrice.textContent = `$${product.price.toFixed(2)}`;
   popupImage.src = product.image;
   popupImage.alt = product.alt;
 
@@ -67,8 +67,6 @@ function openPopup(product) {
     "popup__container-overlay--active"
   );
 }
-
-// TODO: Add learn more button when hovering
 
 // Close popup
 function closePopupAction() {
@@ -147,7 +145,7 @@ function insertProducts(category, products) {
 
     // Product price
     const productPrice = document.createElement("p");
-    productPrice.textContent = `$${product.price}`;
+    productPrice.textContent = `$${product.price.toFixed(2)}`;
     bottomCardContainer.append(productPrice);
 
     // Buy button
