@@ -21,13 +21,8 @@ closeCartButton.addEventListener("click", () => {
   cartContainer.classList.remove("cart__container--active");
 });
 
-// TODO: Animation when item is added to cart, and add clear cart function
-
-// TODO: Add cart storage function
-
-// TODO: Add clear cart function
-
-// Cart -------------
+// --------------------------------------------------
+// Cart
 const cart = [];
 
 // Cloned array of products --------------
@@ -43,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartUI();
 });
 
-// Function to add product to cart
+// Add to cart
 function addToCart(productId) {
   // Find the product
   const product = allProducts.find((item) => item.id === productId);
@@ -69,7 +64,7 @@ function addToCart(productId) {
   }
 }
 
-// Update Cart UI
+// Update Cart
 function updateCartUI() {
   const cartItemContainer = document.querySelector(".cart__item-container");
   const totalPriceElement = document.querySelector(".sum__price");
@@ -91,11 +86,11 @@ function updateCartUI() {
   cart.forEach((item, index) => {
     totalPrice += item.price * item.quantity;
 
-    // Create cart item element -------------
+    // Create cart item element
     const cartItem = document.createElement("li");
     cartItem.className = "cart__item";
 
-    // Cart Item Image -----------
+    // Cart Item Image
     const cartItemImageContainer = document.createElement("div");
     cartItemImageContainer.classList.add("cart__item-image-container");
     cartItem.append(cartItemImageContainer);
@@ -111,7 +106,7 @@ function updateCartUI() {
     itemName.classList.add("cart__item-name");
     cartItem.append(itemName);
 
-    // Cart Item Quantity and Price -----------
+    // Cart Item Quantity and Price
     const itemPriceContainer = document.createElement("div");
     itemPriceContainer.classList.add("item__price-container");
     cartItem.append(itemPriceContainer);
@@ -134,14 +129,14 @@ function updateCartUI() {
     addQuantityButton.classList.add("item__plus");
     itemQuantityContainer.append(addQuantityButton);
 
-    // Item Price ------------
+    // Item Price
     const itemPrice = document.createElement("p");
     itemPrice.textContent = `$${(item.price * item.quantity).toFixed(2)}`;
     itemPriceContainer.append(itemPrice);
 
     cartItemContainer.append(cartItem);
 
-    // EventListener for quantity buttons --------
+    // Quantity buttons
     // Decrease quantity
     subtractQuantityButton.addEventListener("click", () => {
       updateQuantity(index, -1);
@@ -155,14 +150,14 @@ function updateCartUI() {
     updateCartCounter();
   });
 
-  // Update total price ---------
+  // Update total price
   totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
 
-  // Automatically scroll to added product
+  // Scroll to added product
   cartItemContainer.scrollTop = cartItemContainer.scrollHeight;
 }
 
-// Update product quantity in the cart ---------
+// Update product quantity
 function updateQuantity(index, change) {
   const item = cart[index];
   if (item) {
@@ -178,14 +173,14 @@ function updateQuantity(index, change) {
   }
 }
 
-// Update cart counter --------
+// Update cart counter
 function updateCartCounter() {
   const cartCounter = document.querySelector(".cart__counter");
   const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
   cartCounter.textContent = totalQuantity;
 }
 
-// Clear cart -----------
+// Clear cart
 const clearCartButton = document.querySelector(".clear__cart-button");
 function clearCart() {
   cart.length = 0;
@@ -216,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
   getCartFromStorage();
 });
 
-// Checkout -----------
+// Checkout
 const checkoutButton = document.querySelector(".cart__checkout-button");
 
 checkoutButton.addEventListener("click", () => {

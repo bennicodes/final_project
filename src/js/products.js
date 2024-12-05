@@ -53,7 +53,7 @@ export const macProducts = [
     id: "macbook-pro",
     price: 1599.0,
     image: "/src/assets/img/macbook-pro-removebg-preview.png",
-    alt: "MacBook Pro 14-inch",
+    alt: "MacBook Pro",
     specs: [
       "Supercharged by M4, M4 Pro, or M4 Max, MacBook Pro empowers you to take on the most demanding projects",
       "Go all day and night with up to 24 hours of battery life",
@@ -68,7 +68,7 @@ export const macProducts = [
     id: "macbook-air",
     price: 999.0,
     image: "/src/assets/img/Macbook-removebg-preview.png",
-    alt: "MacBook Air 13-inch",
+    alt: "MacBook Air",
     specs: [
       "Apple M2 chip with 8-core CPU, 8-core GPU, and 16-core Neural Engine.",
       "13.6-inch Retina display with True Tone.",

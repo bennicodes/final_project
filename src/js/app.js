@@ -1,4 +1,4 @@
-// Import Product Data ------------
+// Import Products
 import {
   airpodsProducts,
   appleWatchProducts,
@@ -12,12 +12,12 @@ import { addToCart } from "./cart.js";
 document.addEventListener("DOMContentLoaded", () => {
   const buyButtons = document.querySelectorAll(".product__buy-button");
 
-  // Attach click event listener to each "Buy" button
+  // Buy buttons
   buyButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       e.preventDefault();
 
-      // Get the product ID from the button's ID attribute
+      // Get id from button
       const productId = button.id;
 
       // Add product to cart

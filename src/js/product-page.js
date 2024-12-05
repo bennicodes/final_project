@@ -1,4 +1,4 @@
-// Imported Products from products.js -------
+// Imported Products
 import {
   airpodsProducts,
   appleWatchProducts,
@@ -7,7 +7,7 @@ import {
   macProducts,
 } from "./products.js";
 
-// Import from cart.js -------
+// Import cart functionality
 import { addToCart } from "./cart.js";
 
 // Product categories
@@ -33,18 +33,18 @@ const popupSpecs = document.querySelector(".popup__product-list");
 const popupBuyButton = document.querySelector("#popup__buy-button");
 const closePopupButton = document.querySelector(".popup__close-button");
 
-// Function to open the popup
+// Open the popup
 function openPopup(product) {
   //   Popup buy button
   popupBuyButton.textContent = "Buy";
 
-  // Update product details in the popup
+  // Update product details in popup window
   popupHeading.textContent = product.name;
   popupPrice.textContent = `$${product.price.toFixed(2)}`;
   popupImage.src = product.image;
   popupImage.alt = product.alt;
 
-  // Clear existing specs and add new ones
+  // Clear existing specs and add new
   popupSpecs.innerHTML = "";
 
   product.specs.forEach((spec) => {
@@ -52,7 +52,7 @@ function openPopup(product) {
     specItem.textContent = spec;
     specItem.classList.add("popup__product-list-specs");
 
-    // Append each spec as list item
+    // Append each spec
     popupSpecs.append(specItem);
   });
 
@@ -61,7 +61,6 @@ function openPopup(product) {
     addToCart(product.id);
   };
 
-  // Show the popup
   popupContainer.classList.add(
     "popup__container--active",
     "popup__container-overlay--active"
@@ -76,7 +75,7 @@ function closePopupAction() {
   );
 }
 
-// Function to close the popup
+// Close the popup
 function closePopup() {
   popupContainer.classList.remove(
     "popup__container--active",
@@ -84,17 +83,20 @@ function closePopup() {
   );
 }
 
-// Add event listener to the close button
+// Close popup button
 if (closePopupButton) {
   closePopupButton.addEventListener("click", closePopup);
 }
 
-// Close the popup when user clicks outside of popup
+// Close on click outside of popup
 popupContainer.addEventListener("click", (e) => {
   if (e.target === popupContainer) {
     closePopup();
   }
 });
+
+// ------------------------------------------
+// Products
 
 // Insert products to correct section
 function insertProducts(category, products) {
@@ -194,6 +196,7 @@ insertProducts("iPad", ipadProducts);
 insertProducts("Airpods", airpodsProducts);
 insertProducts("Watch", appleWatchProducts);
 
+// ------------------------------------------
 // Filter ------------------------------
 const filterButtons = document.querySelectorAll(".filter__button");
 const productSections = document.querySelectorAll(
@@ -208,7 +211,7 @@ filterButtons.forEach((button) => {
       `.${sectionId}__product-section`
     ).parentElement;
 
-    // Toggle the active class on the button
+    // Toggle the active class on filter button
     buttonClicked.classList.toggle("filter__button--active");
 
     // Get all sections
@@ -216,13 +219,12 @@ filterButtons.forEach((button) => {
       ".filtered__content-container"
     );
 
-    // Update section visibility based on active buttons
+    // Update section visibility based on active button
     const activeButtons = [...filterButtons].filter((btn) =>
       btn.classList.contains("filter__button--active")
     );
 
     if (activeButtons.length > 0) {
-      // Hide all sections initially
       productSections.forEach((section) => {
         section.classList.remove("filter--active");
         section.classList.add("filter--disabled");
@@ -241,7 +243,7 @@ filterButtons.forEach((button) => {
         }
       });
     } else {
-      // If no buttons are active, reset all sections
+      // No active buttons = reset sections
       productSections.forEach((section) => {
         section.classList.remove("filter--disabled");
         section.classList.remove("filter--active");
@@ -250,7 +252,8 @@ filterButtons.forEach((button) => {
   });
 });
 
-// Scroll to top ---------------
+// --------------------------------------------------------
+// Scroll Button
 const scrollToTopButton = document.querySelector(".to-the-top__button");
 
 window.addEventListener("scroll", () => {
