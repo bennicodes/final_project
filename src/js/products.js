@@ -5,7 +5,7 @@ export const iphoneProducts = [
     category: "iPhone",
     id: "iphone-16-pro",
     price: 999.0,
-    image: "/src/assets/img/iphone_16_pro_max-removebg-preview.png",
+    image: "/src/assets/image/iphone_16_pro_max-removebg-preview.png",
     alt: "iPhone 16 Pro",
     specs: [
       "The first iPhone designed for Apple Intelligence. Personal, private, powerful.",
@@ -20,7 +20,7 @@ export const iphoneProducts = [
     category: "iPhone",
     id: "iphone-16",
     price: 799.0,
-    image: "/src/assets/img/iphone-16-reg-removebg-preview.png",
+    image: "/src/assets/image/iphone-16-reg-removebg-preview.png",
     alt: "iPhone 16",
     specs: [
       "The first iPhone designed for Apple Intelligence. Personal, private, powerful.",
@@ -35,7 +35,7 @@ export const iphoneProducts = [
     category: "iPhone",
     id: "iphone-se",
     price: 429.0,
-    image: "/src/assets/img/iphone-SE-removebg-preview.png",
+    image: "/src/assets/image/iphone-SE-removebg-preview.png",
     alt: "iPhone SE",
     specs: [
       "4.7-inch Retina HD display that’s bright, colorful, and sharp.",
@@ -52,7 +52,7 @@ export const macProducts = [
     category: "Mac",
     id: "macbook-pro",
     price: 1599.0,
-    image: "/src/assets/img/macbook-pro-removebg-preview.png",
+    image: "/src/assets/image/macbook-pro-removebg-preview.png",
     alt: "MacBook Pro",
     specs: [
       "Supercharged by M4, M4 Pro, or M4 Max, MacBook Pro empowers you to take on the most demanding projects",
@@ -67,7 +67,7 @@ export const macProducts = [
     category: "Mac",
     id: "macbook-air",
     price: 999.0,
-    image: "/src/assets/img/Macbook-removebg-preview.png",
+    image: "/src/assets/image/Macbook-removebg-preview.png",
     alt: "MacBook Air",
     specs: [
       "Apple M2 chip with 8-core CPU, 8-core GPU, and 16-core Neural Engine.",
@@ -83,7 +83,7 @@ export const macProducts = [
     category: "Mac",
     id: "imac",
     price: 1299.0,
-    image: "/src/assets/img/imac-removebg-preview.png",
+    image: "/src/assets/image/imac-removebg-preview.png",
     alt: "iMac 24-inch",
     specs: [
       "An all-in-one desktop, iMac is strikingly thin, comes in seven vibrant colors, and complements any room",
@@ -100,7 +100,7 @@ export const ipadProducts = [
     category: "iPad",
     id: "ipad-pro",
     price: 1099.0,
-    image: "/src/assets/img/ipad-pro-removebg-preview.png",
+    image: "/src/assets/image/ipad-pro-removebg-preview.png",
     alt: "iPad Pro 12.9-inch",
     specs: [
       "M3 chip with incredible power and efficiency.",
@@ -115,7 +115,7 @@ export const ipadProducts = [
     category: "iPad",
     id: "ipad-air",
     price: 599.0,
-    image: "/src/assets/img/ipad-air-removebg-preview.png",
+    image: "/src/assets/image/ipad-air-removebg-preview.png",
     alt: "iPad Air",
     specs: [
       "A14 Bionic chip delivers powerful performance.",
@@ -130,7 +130,7 @@ export const ipadProducts = [
     category: "iPad",
     id: "ipad",
     price: 349.0,
-    image: "/src/assets/img/ipad-removebg-preview.png",
+    image: "/src/assets/image/ipad-removebg-preview.png",
     alt: "iPad",
     specs: [
       "The A14 Bionic chip lets you run multiple apps and work smoothly between them.",
@@ -147,7 +147,7 @@ export const airpodsProducts = [
     category: "Airpods",
     id: "aiprods-4",
     price: 129.0,
-    image: "/final_project/src/assets/img/airpods-4-removebg-preview.png",
+    image: "/src/assets/image/airpods-4-removebg-preview.png",
     alt: "airpods 4",
     specs: [
       "Personalized Spatial Audio with dynamic head tracking.",
@@ -163,7 +163,7 @@ export const airpodsProducts = [
     category: "Airpods",
     id: "airpods-pro-2",
     price: 249.0,
-    image: "/src/assets/img/airpods-pro-2-removebg-preview.png",
+    image: "/src/assets/image/airpods-pro-2-removebg-preview.png",
     alt: "airpods pro 2",
     specs: [
       "Up to 2x more Active Noise Cancellation, with Adaptive Audio and Transparency mode",
@@ -179,7 +179,7 @@ export const airpodsProducts = [
     category: "Airpods",
     id: "airpods-max",
     price: 549,
-    image: "/src/assets/img/airpods-max-removebg-preview.png",
+    image: "/src/assets/image/airpods-max-removebg-preview.png",
     alt: "airpods max",
     specs: [
       "Up to 2x more Active Noise Cancellation, with Transparency mode",
@@ -196,7 +196,7 @@ export const appleWatchProducts = [
     category: "Apple Watch",
     id: "apple-watch-series-10",
     price: 399.0,
-    image: "/src/assets/img/apple-watch-series-10-removebg-preview.png",
+    image: "/src/assets/image/apple-watch-series-10-removebg-preview.png",
     alt: "apple watch series 10",
     specs: [
       "The thinnest Apple Watch ever, with our biggest display. With a new Wide-Angle Always-On OLED Retina display.",
@@ -212,7 +212,7 @@ export const appleWatchProducts = [
     category: "Apple Watch",
     id: "apple-watch-ultra-2",
     price: 799.0,
-    image: "/src/assets/img/apple-watch-ultra-2-removebg-preview.png",
+    image: "/src/assets/image/apple-watch-ultra-2-removebg-preview.png",
     alt: "Apple Watch Ultra 2",
     specs: [
       "The ultimate sports and adventure watch has a rugged 49mm titanium case with 100-meter water resistance and IP6X dust resistance. Now in black.",
@@ -228,7 +228,7 @@ export const appleWatchProducts = [
     category: "Apple Watch",
     id: "apple-watch-se",
     price: 249,
-    image: "/src/assets/img/apple-watch-se-removebg-preview.png",
+    image: "/src/assets/image/apple-watch-se-removebg-preview.png",
     alt: "Apple Watch SE",
     specs: [
       "Set up Apple Watch For Your Kids,  even if they don’t have their own iPhone.",
