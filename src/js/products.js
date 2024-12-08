@@ -147,7 +147,7 @@ export const airpodsProducts = [
     category: "Airpods",
     id: "aiprods-4",
     price: 129.0,
-    image: "/src/assets/img/airpods-4-removebg-preview.png",
+    image: "/Users/benni/Documents/frontend-utvikling-studie/eksamen/19/final_project/src/assets/img/airpods-4-removebg-preview.png",
     alt: "airpods 4",
     specs: [
       "Personalized Spatial Audio with dynamic head tracking.",
