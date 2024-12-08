@@ -6,7 +6,7 @@ A web application inspired by apple and eplehuset with some similar design and f
 
 [Usage](#usage)
 [Features](#features)
-[Sources](#sources)
+[Resources](#resources)
 [License](#license)
 [Contact](#contact)
 
@@ -29,7 +29,10 @@ Filter
 Popup window
 Scroll to top button on product page
 
-## Sources
+## Resources
+
+Netlify link:
+https://webapp-store.netlify.app
 
 Images and inspiration:
 https://apple.com and http://eplehuset.no
