@@ -12,10 +12,11 @@ header {
 }
 
 .navbar {
-  width: 100%;
+  min-width: 100%;
   background-color: var(--primary-navbar-color);
   color: var(--navbar-text-color);
   display: flex;
+  flex-grow: 1;
   align-items: center;
   gap: var(--spacing-medium);
   font-family: Lato-Regular, sans-serif;
