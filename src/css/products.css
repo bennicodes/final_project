@@ -73,6 +73,7 @@ main {
 
 .filter__button {
   background-color: transparent;
+  color: #000;
   padding: var(--spacing-small) var(--spacing-medium);
   border: 1px solid #cfcfcf;
   border-radius: var(--product-card-border-radius);
@@ -137,7 +138,7 @@ main {
 
 .popup__container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -146,7 +147,6 @@ main {
   display: none;
   overflow: hidden;
   z-index: 1000;
-  border-radius: var(--product-card-border-radius);
 }
 
 .popup__container--active {
@@ -284,6 +284,7 @@ main {
 .product__card {
   position: relative;
   background-color: #fff;
+  color: #000;
   width: 100%;
   height: 100%;
   display: flex;
@@ -305,6 +306,7 @@ main {
 }
 
 .product__card-heading {
+  color: inherit;
   width: 75%;
   padding: var(--spacing-medium) var(--spacing-medium);
   font-weight: 500;
@@ -329,6 +331,7 @@ main {
 }
 
 .bottom__card-container {
+  color: inherit;
   width: 100%;
   display: flex;
   justify-content: space-between;
